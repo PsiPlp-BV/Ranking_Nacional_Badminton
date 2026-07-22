@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranking Nacional de Bádminton — Chile 2026</title>
+<meta name="description" content="Ranking Nacional oficial de bádminton de Chile 2026: clasificación por categoría y modalidad, perfiles de deportistas, ranking de clubes y calendario del Torneo Nacional 3 Fechas.">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon_fedebad_64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_fedebad_32.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="#inicio" class="brand">
+      <img src="assets/logo_fedebad_256.png" alt="" class="logo-mark">
+      <span>Ranking Nacional Bádminton
+        <small>FEDEBADCHILE · Temporada 2026</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#ranking">Ranking</a>
+      <a href="#jugadores">Jugadores</a>
+      <a href="#clubes">Clubes</a>
+      <a href="#calendario">Calendario</a>
+      <a href="#reglamento">Reglamento</a>
+      <a href="#federacion">Federación</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+        <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HOME VIEW ================= -->
+<main id="view-home">
+
+  <!-- ---- HERO ---- -->
+  <section id="inicio" class="hero">
+    <img src="assets/court-pattern.svg" alt="" class="hero-court">
+    <img src="assets/deco-plumilla_web.png" alt="" class="deco-icon" style="width:150px; top:14%; left:2%; transform:rotate(-18deg);">
+    <img src="assets/deco-raqueta_web.png" alt="" class="deco-icon" style="width:190px; bottom:-8%; right:1%; transform:rotate(14deg);">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge"><span class="dot"></span> Fecha 1 de 3 completada · Temporada 2026</div>
+        <h1>El <em>Ranking Nacional</em> oficial del bádminton chileno</h1>
+        <p class="lede">Plataforma oficial de la Federación Chilena de Badminton para la clasificación individual por categoría y modalidad, el ranking de clubes y los perfiles de deportistas del Torneo Nacional 2026 — Sub15, Sub17, Sub19 y Adulto, en 3 fechas.</p>
+        <div class="hero-ctas">
+          <a href="#ranking" class="btn btn-primary">Ver ranking nacional</a>
+          <a href="#jugadores" class="btn btn-light">Explorar deportistas</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong id="metaAthletes">—</strong>&nbsp;deportistas registrados</span>
+          <span><strong id="metaClubs">—</strong>&nbsp;clubes federados</span>
+          <span><strong>18</strong>&nbsp;cuadros disputados en Fecha 1</span>
+          <span><strong>CEO</strong>&nbsp;Ñuñoa, Santiago</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-head">
+          <h3 id="heroPodiumLabel">Líderes por categoría</h3>
+          <span class="hero-live-badge"><span class="pulse-dot"></span>En vivo</span>
+        </div>
+        <div id="heroPodium" class="podium-fade"></div>
+        <div class="carousel-dots" id="heroCarouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- STAT TILES ---- -->
+  <div class="container">
+    <div class="stat-grid" id="statGrid"></div>
+  </div>
+
+  <!-- ---- RANKING NACIONAL ---- -->
+  <section id="ranking" class="section-pad">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Ranking individual</div>
+          <h2>Ranking Nacional por categoría y modalidad</h2>
+          <p>100 pts al 1er lugar · 80 al 2° · 60 al 3° · 30 a cuartofinalistas (5°–8°) · 10 pts por participación. En dobles, ambos integrantes suman el puntaje completo a su ranking individual.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="field-group">
+          <select class="select" id="rankCategory"></select>
+          <select class="select" id="rankModality"></select>
+          <select class="select" id="rankFecha"></select>
+        </div>
+        <div class="toolbar-spacer"></div>
+        <span class="result-count" id="rankCount"></span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table" id="rankTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- CLUBES ---- -->
+  <section id="clubes" class="section-pad section-alt">
+    <img src="assets/deco-raqueta_web.png" alt="" class="deco-icon" style="width:170px; top:-6%; right:3%; transform:rotate(-10deg);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Ranking de clubes</div>
+          <h2>Clasificación de clubes federados</h2>
+          <p>50 pts base por presentarse + 1 pto por deportista inscrito + 7/5/3 ptos por medalla de oro/plata/bronce + bono de 20 pts si el club inscribe más de 10 deportistas en la fecha.</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="align-items:start;">
+        <div class="table-wrap">
+          <table class="data-table" id="clubTable">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="card chart-card" id="clubChart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- TOP ATLETAS CHART + JUGADORES ---- -->
+  <section id="jugadores" class="section-pad">
+    <img src="assets/deco-plumilla_web.png" alt="" class="deco-icon" style="width:130px; bottom:4%; left:1.5%; transform:rotate(24deg);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Directorio de deportistas</div>
+          <h2>Perfiles de jugadores</h2>
+          <p>Datos deportivos públicos: club, categoría, modalidades y resultados oficiales. No se muestran datos personales (RUT, contacto ni fecha de nacimiento).</p>
+        </div>
+      </div>
+
+      <div class="card chart-card" style="margin-bottom:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:2px;">
+          <div>
+            <div class="chart-title" id="topPlayersTitle">Top 10 deportistas</div>
+            <div class="chart-subtitle" id="topPlayersSubtitle"></div>
+          </div>
+          <select class="select" id="topPlayersCategory" style="min-width:190px;"></select>
+        </div>
+        <div id="topPlayersChart" style="margin-top:14px;"></div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" class="search-input" id="playerSearch" placeholder="Buscar deportista por nombre…">
+        </div>
+        <select class="select" id="playerCategoryFilter"></select>
+        <select class="select" id="playerClubFilter"></select>
+        <div class="toolbar-spacer"></div>
+        <span class="result-count" id="playerCount"></span>
+      </div>
+
+      <div class="grid-3" id="playersGrid"></div>
+    </div>
+  </section>
+
+  <!-- ---- CALENDARIO ---- -->
+  <section id="calendario" class="section-pad section-alt">
+    <img src="assets/deco-raqueta_web.png" alt="" class="deco-icon" style="width:160px; bottom:-10%; left:2%; transform:rotate(20deg);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Calendario 2026</div>
+          <h2>Torneo Nacional — 3 Fechas</h2>
+          <p>El ranking se actualiza y publica tras el cierre de cada fecha (máximo 10 días hábiles). El puntaje anual es la suma directa de las 3 fechas.</p>
+        </div>
+      </div>
+      <div id="fechasList" style="display:flex; flex-direction:column; gap:16px;"></div>
+    </div>
+  </section>
+
+  <!-- ---- REGLAMENTO ---- -->
+  <section id="reglamento" class="section-pad">
+    <img src="assets/deco-plumilla_web.png" alt="" class="deco-icon" style="width:120px; top:2%; right:2.5%; transform:rotate(-8deg);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Transparencia</div>
+          <h2>Sistema de puntos y reglamento</h2>
+          <p>Metodología oficial de puntuación para deportistas y clubes, según las bases del Torneo Nacional 2026.</p>
+        </div>
+      </div>
+
+      <div class="rules-grid">
+        <div class="card card-pad">
+          <h3 style="font-size:15px; margin-bottom:12px;">Tabla de puntos por posición</h3>
+          <table class="data-table points-table" id="pointsTableEl">
+            <thead><tr><th>Posición</th><th>Detalle</th><th class="num">Puntos</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <div class="divider"></div>
+          <h3 style="font-size:15px; margin-bottom:12px;">Criterio de desempate — deportistas</h3>
+          <div class="rule-list" id="tiebreakList"></div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div class="card card-pad">
+            <h3 style="font-size:15px; margin-bottom:12px;">Puntaje de clubes</h3>
+            <div class="rule-list" id="clubRulesList"></div>
+          </div>
+          <div class="card card-pad">
+            <h3 style="font-size:15px; margin-bottom:10px;">Penalizaciones</h3>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div class="penalty-box">
+                <div class="t">Deportistas</div>
+                <div class="d">Inasistencia injustificada a una fecha: <strong>−30 puntos</strong> en el ranking anual. Es obligatorio competir en las 3 fechas; se admite ausencia justificada en solo una.</div>
+              </div>
+              <div class="penalty-box">
+                <div class="t">Clubes</div>
+                <div class="d">No presentarse en todas las fechas: <strong>−20 puntos</strong>. Baja de un deportista fuera de plazo: <strong>−1 punto</strong> adicional por cada caso.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- FEDERACIÓN ---- -->
+  <section id="federacion" class="section-pad section-alt">
+    <div class="container">
+      <div class="section-head">
+        <div style="display:flex; align-items:center; gap:18px;">
+          <img src="assets/logo_fedebad_256.png" alt="Federación Chilena de Badminton" style="width:84px; height:84px; flex:none;">
+          <div>
+            <div class="eyebrow">Institucional</div>
+            <h2>Federación Chilena de Badminton</h2>
+            <p>Organismo rector del bádminton en Chile, a cargo del Torneo Nacional y de la conformación del ranking oficial.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-4">
+        <div class="card card-pad">
+          <h3 style="font-size:14.5px; margin-bottom:10px;">Sede y contacto</h3>
+          <p class="text-muted" style="font-size:13.5px; line-height:1.7;" id="fedContact"></p>
+        </div>
+        <div class="card card-pad">
+          <h3 style="font-size:14.5px; margin-bottom:10px;">Team FEDEBADCHILE FDN</h3>
+          <div id="fedGerencia" style="font-size:13.5px; display:flex; flex-direction:column; gap:6px;"></div>
+        </div>
+        <div class="card card-pad">
+          <h3 style="font-size:14.5px; margin-bottom:10px;">Directiva</h3>
+          <div id="fedDirectiva" style="font-size:13.5px; display:flex; flex-direction:column; gap:6px;"></div>
+        </div>
+        <div class="card card-pad">
+          <h3 style="font-size:14.5px; margin-bottom:10px;">Fuente de resultados</h3>
+          <p class="text-muted" style="font-size:13.5px; line-height:1.7;">Los resultados de cada fecha se obtienen directamente del sistema oficial de la federación.</p>
+          <a id="tsLink" href="#" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="margin-top:10px;">Ver en Tournamentsoftware.com →</a>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:14px; margin-top:22px;">
+        <h3 style="font-size:13px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted); font-weight:700;">Síguenos</h3>
+        <div id="fedSocial" style="display:flex; gap:10px;"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= PROFILE VIEW ================= -->
+<main id="view-profile" class="hidden">
+  <section class="profile-hero">
+    <div class="container">
+      <a href="#jugadores" class="back-link" id="profileBack">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>
+        Volver al directorio
+      </a>
+      <div class="profile-head">
+        <div class="avatar avatar-lg" id="profileAvatar"></div>
+        <div class="profile-id">
+          <h1 id="profileName"></h1>
+          <div class="sub" id="profileSub"></div>
+          <div class="entity-badges" id="profileBadges" style="margin-top:10px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container profile-stat-strip">
+    <div class="stat-grid" id="profileStats"></div>
+  </div>
+  <div class="container section-pad tight">
+    <div class="grid-2" style="grid-template-columns: 2fr 1fr; align-items:start;">
+      <div>
+        <h3 style="font-size:16px; margin-bottom:14px;">Resultados — Fecha 1 · 2026</h3>
+        <div class="table-wrap">
+          <table class="data-table profile-results-table" id="profileResultsTable">
+            <thead>
+              <tr><th>Categoría</th><th>Modalidad</th><th>Pareja</th><th>Resultado</th><th class="num">Puntos</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div class="card card-pad">
+          <h3 style="font-size:14px; margin-bottom:12px;">Posición en ranking</h3>
+          <div id="profileRankings" style="display:flex; flex-direction:column; gap:10px;"></div>
+        </div>
+        <div class="privacy-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          <span>Este perfil muestra únicamente resultados deportivos de carácter público. No se publican RUT, teléfono, correo, fecha de nacimiento ni fotografías, en resguardo de los datos personales de los deportistas.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <img src="assets/deco-raqueta_web.png" alt="" class="deco-icon" style="width:220px; bottom:-14%; right:2%; transform:rotate(-14deg);">
+  <img src="assets/deco-plumilla_web.png" alt="" class="deco-icon" style="width:110px; top:8%; left:3%; transform:rotate(30deg);">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <img src="assets/logo_fedebad_256.png" alt="" class="logo-mark">
+          <span>Ranking Nacional Bádminton<small>FEDEBADCHILE · Temporada 2026</small></span>
+        </div>
+        <p style="font-size:13px; max-width:38ch; color:var(--text-on-dark-secondary);">Plataforma oficial de la Federación Chilena de Badminton (FEDEBADCHILE) para la clasificación, publicación y seguimiento del Ranking Nacional de la temporada 2026.</p>
+        <div class="sponsor-strip" style="margin-top:16px;" id="sponsorStrip"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <a href="#ranking">Ranking Nacional</a>
+        <a href="#clubes">Ranking de clubes</a>
+        <a href="#jugadores">Jugadores</a>
+        <a href="#calendario">Calendario</a>
+      </div>
+      <div class="footer-col">
+        <h4>Reglamento</h4>
+        <a href="#reglamento">Sistema de puntos</a>
+        <a href="#reglamento">Desempates</a>
+        <a href="#reglamento">Penalizaciones</a>
+      </div>
+      <div class="footer-col">
+        <h4>Federación</h4>
+        <a href="#federacion">Institucional</a>
+        <a href="https://www.fedebadchile.cl" target="_blank" rel="noopener">www.fedebadchile.cl</a>
+        <a id="footerTsLink" href="#" target="_blank" rel="noopener">Tournamentsoftware.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Federación Chilena de Badminton (FEDEBADCHILE). Ranking Nacional oficial — todos los derechos reservados.</span>
+      <span>Fecha 1 disputada en CEO, Ñuñoa · Fechas 2 y 3 se actualizarán una vez disputadas.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/meta.js"></script>
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
