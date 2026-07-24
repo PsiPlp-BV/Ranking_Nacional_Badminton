@@ -1,6 +1,5 @@
 // Datos oficiales del Ranking Nacional de Badminton Chile 2026
-// Fuente: Bases Torneo Nacional 2026 (FEDEBADCHILE) + resultados reales de Fecha 1
-// (Torneo Nacional Juvenil-Adulto Santiago 2026, 30 abr - 3 may) via Tournamentsoftware.com
+// Generado por scripts/build_data.py — no editar a mano, re-ejecutar el script.
 const PLAYERS = [
   {
     "name": "Felipe Canario",
@@ -432,6 +431,54 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
+    "name": "Ashley Montre Rubilar",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 300,
+    "gold": 3,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Vania Diaz"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Bruno Mora"
+      }
+    ],
+    "id": "ashley-montre-rubilar",
+    "color": "#4a3aa7"
+  },
+  {
     "name": "Bastian Astudillo Quispe",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
@@ -497,121 +544,6 @@ const PLAYERS = [
     ],
     "id": "bastian-astudillo-quispe",
     "color": "#2a78d6"
-  },
-  {
-    "name": "Ashley Montre Rubilar",
-    "club": "Club Bádminton Victoria",
-    "club_short": "CB Victoria",
-    "total_points": 300,
-    "gold": 3,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WS",
-        "category": "Adulto",
-        "modality": "Individuales Femenino",
-        "position": 1,
-        "points": 100,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 1,
-        "points": 100,
-        "partner": "Vania Diaz"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 1,
-        "points": 100,
-        "partner": "Bruno Mora"
-      }
-    ],
-    "id": "ashley-montre-rubilar",
-    "color": "#4a3aa7"
-  },
-  {
-    "name": "Angel Lorca Contreras",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 290,
-    "gold": 0,
-    "silver": 1,
-    "bronze": 3,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": "Emmanuel Esquer Coutiño"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U19",
-        "category": "Sub19",
-        "modality": "Dobles Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": "Emmanuel Esquer Coutiño"
-      },
-      {
-        "fecha": 1,
-        "event": "XD U19",
-        "category": "Sub19",
-        "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
-        "partner": "Emilia Gonzalez"
-      }
-    ],
-    "id": "angel-lorca-contreras",
-    "color": "#e87ba4"
   },
   {
     "name": "Alexandra Campusano Molina",
@@ -688,6 +620,73 @@ const PLAYERS = [
     ],
     "id": "alexandra-campusano-molina",
     "color": "#2a78d6"
+  },
+  {
+    "name": "Angel Lorca Contreras",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 290,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 3,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Emmanuel Esquer Coutiño"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Emmanuel Esquer Coutiño"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Emilia Gonzalez"
+      }
+    ],
+    "id": "angel-lorca-contreras",
+    "color": "#e87ba4"
   },
   {
     "name": "Bruno Mora",
@@ -1037,6 +1036,56 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
+    "name": "Consuelo Valdebenito",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 220,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 1,
+    "categories": [
+      "Sub15",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Derek Oses"
+      },
+      {
+        "fecha": 1,
+        "event": "GD U17",
+        "category": "Sub17",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Emilia Perez"
+      },
+      {
+        "fecha": 1,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      }
+    ],
+    "id": "consuelo-valdebenito",
+    "color": "#008300"
+  },
+  {
     "name": "Joaquin Bugueño Chinchilla",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
@@ -1161,17 +1210,16 @@ const PLAYERS = [
     "color": "#e87ba4"
   },
   {
-    "name": "Consuelo Valdebenito",
+    "name": "Emilia Perez",
     "club": "Club Deportivo Kaizen",
     "club_short": "CDSC Kaizen",
-    "total_points": 220,
+    "total_points": 210,
     "gold": 0,
     "silver": 2,
-    "bronze": 1,
+    "bronze": 0,
     "categories": [
       "Sub15",
-      "Sub17",
-      "Sub19"
+      "Sub17"
     ],
     "modalities": [
       "Dobles Femenino",
@@ -1181,12 +1229,21 @@ const PLAYERS = [
     "results": [
       {
         "fecha": 1,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": null
+      },
+      {
+        "fecha": 1,
         "event": "XD U15",
         "category": "Sub15",
         "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
-        "partner": "Derek Oses"
+        "position": 2,
+        "points": 80,
+        "partner": "Bastian Astudillo Quispe"
       },
       {
         "fecha": 1,
@@ -1195,19 +1252,10 @@ const PLAYERS = [
         "modality": "Dobles Femenino",
         "position": 2,
         "points": 80,
-        "partner": "Emilia Perez"
-      },
-      {
-        "fecha": 1,
-        "event": "GS U19",
-        "category": "Sub19",
-        "modality": "Individuales Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": null
+        "partner": "Consuelo Valdebenito"
       }
     ],
-    "id": "consuelo-valdebenito",
+    "id": "emilia-perez",
     "color": "#008300"
   },
   {
@@ -1335,55 +1383,6 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
-    "name": "Emilia Perez",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 210,
-    "gold": 0,
-    "silver": 2,
-    "bronze": 0,
-    "categories": [
-      "Sub15",
-      "Sub17"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "GS U15",
-        "category": "Sub15",
-        "modality": "Individuales Femenino",
-        "position": 4,
-        "points": 50,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Bastian Astudillo Quispe"
-      },
-      {
-        "fecha": 1,
-        "event": "GD U17",
-        "category": "Sub17",
-        "modality": "Dobles Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": "Consuelo Valdebenito"
-      }
-    ],
-    "id": "emilia-perez",
-    "color": "#008300"
-  },
-  {
     "name": "Francisca Diaz Gomez",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
@@ -1420,6 +1419,55 @@ const PLAYERS = [
     ],
     "id": "francisca-diaz-gomez",
     "color": "#2a78d6"
+  },
+  {
+    "name": "Amanda Senn",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 190,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 1,
+    "categories": [
+      "Sub15",
+      "Sub17"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 4,
+        "points": 50,
+        "partner": "Felipe Saez Zurita"
+      },
+      {
+        "fecha": 1,
+        "event": "GD U17",
+        "category": "Sub17",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Fabiola Neumann"
+      }
+    ],
+    "id": "amanda-senn",
+    "color": "#008300"
   },
   {
     "name": "Ignacio Navarrete",
@@ -1489,55 +1537,6 @@ const PLAYERS = [
     "color": "#008300"
   },
   {
-    "name": "Amanda Senn",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 190,
-    "gold": 0,
-    "silver": 1,
-    "bronze": 1,
-    "categories": [
-      "Sub15",
-      "Sub17"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "GS U15",
-        "category": "Sub15",
-        "modality": "Individuales Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 4,
-        "points": 50,
-        "partner": "Felipe Saez Zurita"
-      },
-      {
-        "fecha": 1,
-        "event": "GD U17",
-        "category": "Sub17",
-        "modality": "Dobles Femenino",
-        "position": 3,
-        "points": 60,
-        "partner": "Fabiola Neumann"
-      }
-    ],
-    "id": "amanda-senn",
-    "color": "#008300"
-  },
-  {
     "name": "Ting Ting Chou Hu",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
@@ -1584,6 +1583,54 @@ const PLAYERS = [
     ],
     "id": "ting-ting-chou-hu",
     "color": "#2a78d6"
+  },
+  {
+    "name": "Felipe Saez Zurita",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 160,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 4,
+        "points": 50,
+        "partner": "Derek Oses"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 4,
+        "points": 50,
+        "partner": "Amanda Senn"
+      }
+    ],
+    "id": "felipe-saez-zurita",
+    "color": "#008300"
   },
   {
     "name": "Gabriel Vicencio López",
@@ -1698,54 +1745,6 @@ const PLAYERS = [
     ],
     "id": "yeiden-ramirez-reinoso",
     "color": "#eb6834"
-  },
-  {
-    "name": "Felipe Saez Zurita",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 160,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 1,
-    "categories": [
-      "Sub15"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "BS U15",
-        "category": "Sub15",
-        "modality": "Individuales Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U15",
-        "category": "Sub15",
-        "modality": "Dobles Masculino",
-        "position": 4,
-        "points": 50,
-        "partner": "Derek Oses"
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 4,
-        "points": 50,
-        "partner": "Amanda Senn"
-      }
-    ],
-    "id": "felipe-saez-zurita",
-    "color": "#008300"
   },
   {
     "name": "Fabiola Neumann",
@@ -1941,102 +1940,6 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
-    "name": "Valentina Arriagada Noack",
-    "club": "Club Bádminton Esperanza de Quilpué",
-    "club_short": "CB Esperanza de Quilpué",
-    "total_points": 120,
-    "gold": 0,
-    "silver": 1,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WS",
-        "category": "Adulto",
-        "modality": "Individuales Femenino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": "Ting Ting Chou Hu"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 5,
-        "points": 30,
-        "partner": "Juan Guillermo Del Pino"
-      }
-    ],
-    "id": "valentina-arriagada-noack",
-    "color": "#eda100"
-  },
-  {
-    "name": "Sarai Espinoza Manquecura",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 120,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 1,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WS",
-        "category": "Adulto",
-        "modality": "Individuales Femenino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "GS U19",
-        "category": "Sub19",
-        "modality": "Individuales Femenino",
-        "position": 3,
-        "points": 60,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U19",
-        "category": "Sub19",
-        "modality": "Dobles Mixto",
-        "position": 4,
-        "points": 50,
-        "partner": "Joaquin Bugueño Chinchilla"
-      }
-    ],
-    "id": "sarai-espinoza-manquecura",
-    "color": "#e87ba4"
-  },
-  {
     "name": "Emilia Gonzalez",
     "club": "Club Bádminton Santiago",
     "club_short": "CB Santiago",
@@ -2133,6 +2036,102 @@ const PLAYERS = [
     ],
     "id": "haofeng-luo-wo",
     "color": "#2a78d6"
+  },
+  {
+    "name": "Sarai Espinoza Manquecura",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 120,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 4,
+        "points": 50,
+        "partner": "Joaquin Bugueño Chinchilla"
+      }
+    ],
+    "id": "sarai-espinoza-manquecura",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Valentina Arriagada Noack",
+    "club": "Club Bádminton Esperanza de Quilpué",
+    "club_short": "CB Esperanza de Quilpué",
+    "total_points": 120,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Ting Ting Chou Hu"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Juan Guillermo Del Pino"
+      }
+    ],
+    "id": "valentina-arriagada-noack",
+    "color": "#eda100"
   },
   {
     "name": "Andrea Montero Sanchez",
@@ -2469,44 +2468,6 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
-    "name": "Nicole Schneiter",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 60,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WS",
-        "category": "Adulto",
-        "modality": "Individuales Femenino",
-        "position": 5,
-        "points": 30,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 5,
-        "points": 30,
-        "partner": "Emilia Gonzalez"
-      }
-    ],
-    "id": "nicole-schneiter",
-    "color": "#e87ba4"
-  },
-  {
     "name": "Javiera Pantoja Andrades",
     "club": "Club Bádminton Victoria",
     "club_short": "CB Victoria",
@@ -2543,44 +2504,6 @@ const PLAYERS = [
     ],
     "id": "javiera-pantoja-andrades",
     "color": "#4a3aa7"
-  },
-  {
-    "name": "Thomas Rohde Cvitanic",
-    "club": "Club Bádminton Limarí",
-    "club_short": "CB Limarí",
-    "total_points": 60,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Sub15"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "BS U15",
-        "category": "Sub15",
-        "modality": "Individuales Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U15",
-        "category": "Sub15",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Juan-José Cos Cortés"
-      }
-    ],
-    "id": "thomas-rohde-cvitanic",
-    "color": "#eb6834"
   },
   {
     "name": "Juan-José Cos Cortés",
@@ -2621,6 +2544,44 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
+    "name": "Nicole Schneiter",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 60,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Emilia Gonzalez"
+      }
+    ],
+    "id": "nicole-schneiter",
+    "color": "#e87ba4"
+  },
+  {
     "name": "Ramses Cassis Durango",
     "club": "Club Bádminton Limarí",
     "club_short": "CB Limarí",
@@ -2656,6 +2617,140 @@ const PLAYERS = [
       }
     ],
     "id": "ramses-cassis-durango",
+    "color": "#eb6834"
+  },
+  {
+    "name": "Thomas Rohde Cvitanic",
+    "club": "Club Bádminton Limarí",
+    "club_short": "CB Limarí",
+    "total_points": 60,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Juan-José Cos Cortés"
+      }
+    ],
+    "id": "thomas-rohde-cvitanic",
+    "color": "#eb6834"
+  },
+  {
+    "name": "Jhon Alcons Calle",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 50,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Bastian Astudillo Quispe"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      }
+    ],
+    "id": "jhon-alcons-calle",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Jiahong Wang",
+    "club": "Club Bádminton Limarí",
+    "club_short": "CB Limarí",
+    "total_points": 50,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Jose Alcayaga Contreras"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      }
+    ],
+    "id": "jiahong-wang",
     "color": "#eb6834"
   },
   {
@@ -2707,15 +2802,14 @@ const PLAYERS = [
     "color": "#e87ba4"
   },
   {
-    "name": "Jiahong Wang",
+    "name": "Alonso Maldonado Sanchez",
     "club": "Club Bádminton Limarí",
     "club_short": "CB Limarí",
-    "total_points": 50,
+    "total_points": 40,
     "gold": 0,
     "silver": 0,
     "bronze": 0,
     "categories": [
-      "Adulto",
       "Sub19"
     ],
     "modalities": [
@@ -2725,82 +2819,25 @@ const PLAYERS = [
     "results": [
       {
         "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": null,
-        "points": 10,
-        "partner": "Jose Alcayaga Contreras"
-      },
-      {
-        "fecha": 1,
         "event": "BS U19",
         "category": "Sub19",
         "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
         "position": 5,
         "points": 30,
-        "partner": null
+        "partner": "Ramses Cassis Durango"
       }
     ],
-    "id": "jiahong-wang",
+    "id": "alonso-maldonado-sanchez",
     "color": "#eb6834"
-  },
-  {
-    "name": "Jhon Alcons Calle",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 50,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Bastian Astudillo Quispe"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      }
-    ],
-    "id": "jhon-alcons-calle",
-    "color": "#2a78d6"
   },
   {
     "name": "Clément Delvigne",
@@ -2879,42 +2916,32 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
-    "name": "Alonso Maldonado Sanchez",
-    "club": "Club Bádminton Limarí",
-    "club_short": "CB Limarí",
-    "total_points": 40,
+    "name": "Consuelo Moscoso Cordova",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 30,
     "gold": 0,
     "silver": 0,
     "bronze": 0,
     "categories": [
-      "Sub19"
+      "Sub17"
     ],
     "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
+      "Individuales Femenino"
     ],
     "results": [
       {
         "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U19",
-        "category": "Sub19",
-        "modality": "Dobles Masculino",
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
         "position": 5,
         "points": 30,
-        "partner": "Ramses Cassis Durango"
+        "partner": null
       }
     ],
-    "id": "alonso-maldonado-sanchez",
-    "color": "#eb6834"
+    "id": "consuelo-moscoso-cordova",
+    "color": "#e87ba4"
   },
   {
     "name": "Daniel Astudillo Opazo",
@@ -3041,72 +3068,6 @@ const PLAYERS = [
     "color": "#e87ba4"
   },
   {
-    "name": "Consuelo Moscoso Cordova",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 30,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Sub17"
-    ],
-    "modalities": [
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "GS U17",
-        "category": "Sub17",
-        "modality": "Individuales Femenino",
-        "position": 5,
-        "points": 30,
-        "partner": null
-      }
-    ],
-    "id": "consuelo-moscoso-cordova",
-    "color": "#e87ba4"
-  },
-  {
-    "name": "Jose Alcayaga Contreras",
-    "club": "Club Bádminton Limarí",
-    "club_short": "CB Limarí",
-    "total_points": 20,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": null,
-        "points": 10,
-        "partner": "Jiahong Wang"
-      }
-    ],
-    "id": "jose-alcayaga-contreras",
-    "color": "#eb6834"
-  },
-  {
     "name": "Javiera Villalón Vivar",
     "club": "Club Bádminton Valparaíso",
     "club_short": "CB Valparaíso",
@@ -3145,10 +3106,10 @@ const PLAYERS = [
     "color": "#1baf7a"
   },
   {
-    "name": "Sebastián Rosselot Vásquez",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 10,
+    "name": "Jose Alcayaga Contreras",
+    "club": "Club Bádminton Limarí",
+    "club_short": "CB Limarí",
+    "total_points": 20,
     "gold": 0,
     "silver": 0,
     "bronze": 0,
@@ -3156,6 +3117,7 @@ const PLAYERS = [
       "Adulto"
     ],
     "modalities": [
+      "Dobles Masculino",
       "Individuales Masculino"
     ],
     "results": [
@@ -3167,10 +3129,19 @@ const PLAYERS = [
         "position": null,
         "points": 10,
         "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Jiahong Wang"
       }
     ],
-    "id": "sebastian-rosselot-vasquez",
-    "color": "#e87ba4"
+    "id": "jose-alcayaga-contreras",
+    "color": "#eb6834"
   },
   {
     "name": "Lucas Contreras Sepúlveda",
@@ -3227,6 +3198,34 @@ const PLAYERS = [
     ],
     "id": "matias-olagnier",
     "color": "#e87ba4"
+  },
+  {
+    "name": "Sebastián Rosselot Vásquez",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 10,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      }
+    ],
+    "id": "sebastian-rosselot-vasquez",
+    "color": "#e87ba4"
   }
 ];
 
@@ -3239,8 +3238,8 @@ const CLUBS = [
     "silver": 7,
     "bronze": 6,
     "fecha1_points": 256,
-    "color": "#2a78d6",
-    "rank": 1
+    "rank": 1,
+    "color": "#2a78d6"
   },
   {
     "name": "Club Deportivo Kaizen",
@@ -3250,8 +3249,8 @@ const CLUBS = [
     "silver": 14,
     "bronze": 12,
     "fecha1_points": 230,
-    "color": "#008300",
-    "rank": 2
+    "rank": 2,
+    "color": "#008300"
   },
   {
     "name": "Club Bádminton Santiago",
@@ -3261,8 +3260,8 @@ const CLUBS = [
     "silver": 1,
     "bronze": 12,
     "fecha1_points": 134,
-    "color": "#e87ba4",
-    "rank": 3
+    "rank": 3,
+    "color": "#e87ba4"
   },
   {
     "name": "Club Bádminton Limarí",
@@ -3272,8 +3271,8 @@ const CLUBS = [
     "silver": 2,
     "bronze": 5,
     "fecha1_points": 107,
-    "color": "#eb6834",
-    "rank": 4
+    "rank": 4,
+    "color": "#eb6834"
   },
   {
     "name": "Club Bádminton Victoria",
@@ -3283,8 +3282,8 @@ const CLUBS = [
     "silver": 3,
     "bronze": 2,
     "fecha1_points": 103,
-    "color": "#4a3aa7",
-    "rank": 5
+    "rank": 5,
+    "color": "#4a3aa7"
   },
   {
     "name": "Club Bádminton Esperanza de Quilpué",
@@ -3294,8 +3293,8 @@ const CLUBS = [
     "silver": 1,
     "bronze": 0,
     "fecha1_points": 57,
-    "color": "#eda100",
-    "rank": 6
+    "rank": 6,
+    "color": "#eda100"
   },
   {
     "name": "Club Bádminton Valparaíso",
@@ -3305,7 +3304,7 @@ const CLUBS = [
     "silver": 0,
     "bronze": 0,
     "fecha1_points": 53,
-    "color": "#1baf7a",
-    "rank": 7
+    "rank": 7,
+    "color": "#1baf7a"
   }
 ];

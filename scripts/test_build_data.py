@@ -1,0 +1,135 @@
+# -*- coding: utf-8 -*-
+"""
+Tests for the scoring logic in build_data.py — the "raw bracket results ->
+points" half of the pipeline (js/ranking.js in tests/ranking.test.js covers
+the other half: aggregating already-computed points into a sorted ranking).
+
+Run:
+    python -m unittest discover scripts
+"""
+import unittest
+
+from build_data import points_for, compute_results, compute_club_scores, make_event, CLUB_RULES
+
+
+class PointsForTests(unittest.TestCase):
+    def test_official_table(self):
+        self.assertEqual(points_for(1), 100)
+        self.assertEqual(points_for(2), 80)
+        self.assertEqual(points_for(3), 60)
+        self.assertEqual(points_for(4), 50)
+        self.assertEqual(points_for(5), 30)
+        self.assertEqual(points_for("participation"), 10)
+
+    def test_quarterfinalist_tier_is_a_catch_all(self):
+        # Positions beyond 5 (e.g. a round-of-16 loser handed position 7)
+        # must still land in the 5th-8th tier, not raise/return None.
+        self.assertEqual(points_for(6), 30)
+        self.assertEqual(points_for(8), 30)
+
+
+def identity_club(_name):
+    return "Club Test"
+
+
+class ComputeResultsTests(unittest.TestCase):
+    def test_elimination_final_and_tied_bronze(self):
+        events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 8, {
+            1: [("Ana",)],
+            2: [("Beto",)],
+            3: [("Caro",), ("Dani",)],
+        })]
+        players = compute_results(events, identity_club)
+        self.assertEqual(players["Ana"]["total_points"], 100)
+        self.assertEqual(players["Ana"]["gold"], 1)
+        self.assertEqual(players["Beto"]["total_points"], 80)
+        self.assertEqual(players["Caro"]["total_points"], 60)
+        self.assertEqual(players["Dani"]["total_points"], 60)
+        self.assertEqual(players["Caro"]["bronze"], 1)
+        self.assertEqual(players["Dani"]["bronze"], 1, "both semifinal losers get bronze, not just one")
+
+    def test_round_robin_fourth_place(self):
+        events = [make_event(1, "Cat", "Individuales Femenino", "GS", "rr", 4, {
+            1: [("Ana",)], 2: [("Beto",)], 3: [("Caro",)], 4: [("Dani",)],
+        })]
+        players = compute_results(events, identity_club)
+        self.assertEqual(players["Dani"]["total_points"], 50, "4th place only scores in round-robin draws")
+
+    def test_participation_only_tier(self):
+        events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 16, {
+            1: [("Ana",)],
+        }, participation=[("Zoe",)])]
+        players = compute_results(events, identity_club)
+        self.assertEqual(players["Zoe"]["total_points"], 10)
+        self.assertEqual(players["Zoe"]["gold"], 0)
+
+    def test_doubles_both_partners_get_full_points(self):
+        events = [make_event(1, "Cat", "Dobles Masculino", "MD", "elim", 8, {
+            1: [("Ana", "Beto")],
+        })]
+        players = compute_results(events, identity_club)
+        self.assertEqual(players["Ana"]["total_points"], 100)
+        self.assertEqual(players["Beto"]["total_points"], 100, "both doubles partners score the full points, not half")
+        self.assertEqual(players["Ana"]["results"][0]["partner"], "Beto")
+        self.assertEqual(players["Beto"]["results"][0]["partner"], "Ana")
+
+    def test_same_player_across_two_categories_sums_both(self):
+        events = [
+            make_event(1, "Sub19", "Individuales Masculino", "BS19", "elim", 4, {1: [("Ana",)]}),
+            make_event(1, "Adulto", "Individuales Masculino", "MS", "elim", 4, {2: [("Ana",)]}),
+        ]
+        players = compute_results(events, identity_club)
+        self.assertEqual(players["Ana"]["total_points"], 180)
+        self.assertEqual(sorted(players["Ana"]["categories"]), ["Adulto", "Sub19"])
+
+    def test_unknown_club_lookup_raises(self):
+        def strict_club(name):
+            raise KeyError(name)
+        events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Nadie",)]})]
+        with self.assertRaises(KeyError):
+            compute_results(events, strict_club)
+
+
+class ClubScoreTests(unittest.TestCase):
+    def test_base_plus_athletes_plus_medals(self):
+        events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {
+            1: [("Ana",)], 2: [("Beto",)],
+        })]
+        players = compute_results(events, lambda n: "Club Uno")
+        scores = compute_club_scores(players, {"Club Uno": "C1"}, CLUB_RULES)
+        club = scores[0]
+        # base 50 + 2 athletes + 1 gold*7 + 1 silver*5 = 50+2+7+5 = 64
+        self.assertEqual(club["fecha1_points"], 64)
+        self.assertEqual(club["athletes"], 2)
+
+    def test_bonus_for_more_than_ten_athletes(self):
+        events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 16, {
+            1: [(f"P{i}",) for i in range(1)],
+        }, participation=[(f"P{i}",) for i in range(2, 13)])]  # 12 participants total incl. winner
+        players = compute_results(events, lambda n: "Club Grande")
+        scores = compute_club_scores(players, {}, CLUB_RULES)
+        self.assertEqual(scores[0]["athletes"], 12)
+        # base 50 + 12 athletes + 1 gold*7 + 20 bonus (>10 athletes) = 89
+        self.assertEqual(scores[0]["fecha1_points"], 89)
+
+    def test_independiente_excluded_from_club_ranking(self):
+        events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]})]
+        players = compute_results(events, lambda n: "Independiente")
+        scores = compute_club_scores(players, {}, CLUB_RULES)
+        self.assertEqual(scores, [], "unaffiliated athletes must not produce a phantom club standing")
+
+    def test_ranking_sorted_and_numbered(self):
+        events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {
+            1: [("Ana",)],
+        })]
+        players = compute_results(events, lambda n: "Club A" if n == "Ana" else "Club B")
+        players["Solo B"] = dict(name="Solo B", club="Club B", results=[], total_points=0,
+                                  gold=0, silver=0, bronze=0, categories=set(), modalities=set())
+        scores = compute_club_scores(players, {}, CLUB_RULES)
+        self.assertEqual(scores[0]["name"], "Club A")
+        self.assertEqual(scores[0]["rank"], 1)
+        self.assertEqual(scores[1]["rank"], 2)
+
+
+if __name__ == "__main__":
+    unittest.main()
