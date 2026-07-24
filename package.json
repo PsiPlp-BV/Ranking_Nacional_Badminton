@@ -1,0 +1,14 @@
+{
+  "name": "ranking-nacional-badminton-chile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ranking Nacional oficial de Bádminton Chile 2026 — Federación Chilena de Badminton (FEDEBADCHILE).",
+  "scripts": {
+    "start": "python -m http.server 8791",
+    "test": "node --test",
+    "test:python": "python -m unittest discover scripts",
+    "test:all": "npm run test && npm run test:python",
+    "build-data": "python scripts/build_data.py"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}
