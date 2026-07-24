@@ -11,6 +11,7 @@
 </head>
 <body>
 <a href="#main" class="skip-link">Saltar al contenido</a>
+<div id="bootError" class="boot-error hidden" role="alert"></div>
 
 <!-- ================= HEADER ================= -->
 <header class="site-header" id="siteHeader">
@@ -52,7 +53,7 @@
       <div>
         <div class="hero-badge"><span class="dot"></span> Fecha 1 de 3 completada · Temporada 2026</div>
         <h1>El <em>Ranking Nacional</em> oficial del bádminton chileno</h1>
-        <p class="lede">Plataforma oficial de la Federación Chilena de Badminton para la clasificación individual por categoría y modalidad, el ranking de clubes y los perfiles de deportistas del Torneo Nacional 2026 — Sub15, Sub17, Sub19 y Adulto, en 3 fechas.</p>
+        <p class="lede">Plataforma oficial de la Federación Chilena de Badminton para la clasificación individual por categoría y modalidad, el ranking de clubes y los perfiles de deportistas del Torneo Nacional 2026 — Sub15, Sub17, Sub19 y Adulto.</p>
         <div class="hero-ctas">
           <a href="#ranking" class="btn btn-primary">Ver ranking nacional</a>
           <a href="#jugadores" class="btn btn-light">Explorar deportistas</a>
@@ -66,11 +67,14 @@
       </div>
       <div class="hero-card">
         <div class="hero-card-head">
-          <h3 id="heroPodiumLabel">Líderes por categoría</h3>
+          <h3 id="heroPodiumLabelStatic">Líderes por categoría</h3>
           <span class="hero-live-badge"><span class="pulse-dot"></span>En vivo</span>
         </div>
-        <div id="heroPodium" class="podium-fade"></div>
-        <div class="carousel-dots" id="heroCarouselDots"></div>
+        <div aria-live="polite" aria-atomic="true">
+          <p id="heroPodiumLabel" style="font-weight:700; font-size:12.5px; color:var(--text-on-dark-secondary); margin-bottom:6px;"></p>
+          <div id="heroPodium" class="podium-fade"></div>
+        </div>
+        <div class="carousel-dots" id="heroCarouselDots" role="group" aria-label="Elegir categoría del podio"></div>
       </div>
     </div>
   </section>
@@ -118,7 +122,6 @@
         <div>
           <div class="eyebrow">Ranking de clubes</div>
           <h2>Clasificación de clubes federados</h2>
-          <p>50 pts base por presentarse + 1 pto por deportista inscrito + 7/5/3 ptos por medalla de oro/plata/bronce + bono de 20 pts si el club inscribe más de 10 deportistas en la fecha.</p>
         </div>
       </div>
 
@@ -142,7 +145,6 @@
         <div>
           <div class="eyebrow">Directorio de deportistas</div>
           <h2>Perfiles de jugadores</h2>
-          <p>Datos deportivos públicos: club, categoría, modalidades y resultados oficiales. No se muestran datos personales (RUT, contacto ni fecha de nacimiento).</p>
         </div>
       </div>
 
@@ -180,7 +182,7 @@
         <div>
           <div class="eyebrow">Calendario 2026</div>
           <h2>Torneo Nacional — 3 Fechas</h2>
-          <p>El ranking se actualiza y publica tras el cierre de cada fecha (máximo 10 días hábiles). El puntaje anual es la suma directa de las 3 fechas.</p>
+          <p>El ranking se actualiza y publica tras el cierre de cada fecha. El puntaje anual es la suma directa de las 3 fechas.</p>
         </div>
       </div>
       <div id="fechasList" style="display:flex; flex-direction:column; gap:16px;"></div>
@@ -317,7 +319,7 @@
         </div>
         <div class="privacy-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-          <span>Este perfil muestra únicamente resultados deportivos de carácter público. No se publican RUT, teléfono, correo, fecha de nacimiento ni fotografías, en resguardo de los datos personales de los deportistas.</span>
+          <span>Este perfil muestra únicamente resultados deportivos de carácter público.</span>
         </div>
       </div>
     </div>
@@ -360,13 +362,14 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Federación Chilena de Badminton (FEDEBADCHILE). Ranking Nacional oficial — todos los derechos reservados.</span>
-      <span>Fecha 1 disputada en CEO, Ñuñoa · Fechas 2 y 3 se actualizarán una vez disputadas.</span>
+      <span>Desarrollado por Benjamin Varas O.</span>
     </div>
   </div>
 </footer>
 
 <script src="js/meta.js"></script>
 <script src="js/data.js"></script>
+<script src="js/ranking.js"></script>
 <script src="js/charts.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/app.js"></script>

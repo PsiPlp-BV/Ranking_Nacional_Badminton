@@ -6,20 +6,72 @@
   "use strict";
 
   /* ---------------------------------------------------------------- */
-  /* Indices & small helpers                                          */
+  /* Error resilience                                                  */
   /* ---------------------------------------------------------------- */
-  const playersById = {};
-  const playersByName = {};
-  PLAYERS.forEach(p => { playersById[p.id] = p; playersByName[p.name] = p; });
+  // Two layers: (1) this whole file runs inside a try/catch, so a broken
+  // data.js/meta.js/ranking.js (missing script, bad edit, etc.) shows a
+  // clear banner instead of a silent blank page; (2) inside init(), each
+  // section renders through safeRender() so one broken section doesn't
+  // take the rest of the page down with it.
 
-  const clubsByName = {};
-  CLUBS.forEach(c => { clubsByName[c.name] = c; });
+  function showBootError(message) {
+    console.error("[RankingBadminton]", message);
+    const el = document.getElementById("bootError");
+    if (!el) return;
+    el.textContent = message;
+    el.classList.remove("hidden");
+  }
 
-  const categoryById = {};
-  CATEGORIES.forEach(c => { categoryById[c.id] = c; });
+  // Runs one section's render function in isolation: a bug in, say, the
+  // players grid must not blank out the ranking table above it. Failures
+  // are logged with the section name and surfaced in the banner, but never
+  // thrown further.
+  function safeRender(label, fn) {
+    try {
+      fn();
+    } catch (err) {
+      console.error(`[RankingBadminton] Fallo al renderizar "${label}":`, err);
+      showBootError(`Hubo un problema mostrando "${label}". El resto de la página debería seguir funcionando — recarga si algo se ve incompleto.`);
+    }
+  }
 
-  const modalityById = {};
-  MODALITIES.forEach(m => { modalityById[m.id] = m; });
+  function whenDomReady(fn) {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
+  }
+
+  function validateBootData() {
+    const problems = [];
+    if (typeof PLAYERS === "undefined" || !Array.isArray(PLAYERS) || !PLAYERS.length) problems.push("PLAYERS (js/data.js)");
+    if (typeof CLUBS === "undefined" || !Array.isArray(CLUBS) || !CLUBS.length) problems.push("CLUBS (js/data.js)");
+    if (typeof CATEGORIES === "undefined" || !Array.isArray(CATEGORIES) || !CATEGORIES.length) problems.push("CATEGORIES (js/meta.js)");
+    if (typeof MODALITIES === "undefined" || !Array.isArray(MODALITIES) || !MODALITIES.length) problems.push("MODALITIES (js/meta.js)");
+    if (typeof FECHAS === "undefined" || !Array.isArray(FECHAS) || !FECHAS.length) problems.push("FECHAS (js/meta.js)");
+    if (typeof RankingEngine === "undefined") problems.push("RankingEngine (js/ranking.js)");
+    return problems;
+  }
+
+  try {
+    const missing = validateBootData();
+    if (missing.length) {
+      throw new Error(`Faltan datos requeridos: ${missing.join(", ")}. Revisa que todos los <script> de js/ se hayan cargado.`);
+    }
+
+    /* ---------------------------------------------------------------- */
+    /* Indices & small helpers                                          */
+    /* ---------------------------------------------------------------- */
+    const playersById = {};
+    const playersByName = {};
+    PLAYERS.forEach(p => { playersById[p.id] = p; playersByName[p.name] = p; });
+
+    const clubsByName = {};
+    CLUBS.forEach(c => { clubsByName[c.name] = c; });
+
+    const categoryById = {};
+    CATEGORIES.forEach(c => { categoryById[c.id] = c; });
+
+    const modalityById = {};
+    MODALITIES.forEach(m => { modalityById[m.id] = m; });
 
   function initials(name) {
     const parts = name.trim().split(/\s+/);
@@ -78,106 +130,23 @@
   }
 
   /* ---------------------------------------------------------------- */
-  /* Ranking computation                                               */
+  /* Ranking computation — thin wrappers around js/ranking.js          */
+  /* (the actual logic lives there so it can run under tests/ in Node) */
   /* ---------------------------------------------------------------- */
 
   const FECHA_NUMS = FECHAS.map(f => f.numero);
 
-  function emptyMetric() { return { points: 0, gold: 0, silver: 0, bronze: 0 }; }
-  function addMetric(m, r) {
-    m.points += r.points;
-    if (r.position === 1) m.gold++;
-    else if (r.position === 2) m.silver++;
-    else if (r.position === 3) m.bronze++;
-  }
-
-  /**
-   * Rows carry a full per-fecha breakdown (byFecha[1..3]) plus a season total,
-   * independent of which fecha the UI currently has selected — the selector
-   * only changes which slice is used to sort/rank.
-   */
   function buildRankingRows(category, modalityId) {
-    let rows = [];
-
-    function makeRow(key, names, ids, clubs, rel) {
-      const byFecha = {};
-      FECHA_NUMS.forEach(n => {
-        const relF = rel.filter(r => r.fecha === n);
-        byFecha[n] = relF.length ? relF.reduce((m, r) => (addMetric(m, r), m), emptyMetric()) : null;
-      });
-      const total = rel.reduce((m, r) => (addMetric(m, r), m), emptyMetric());
-      return { key, names, ids, clubs, byFecha, total };
-    }
-
-    if (modalityId === "general") {
-      PLAYERS.forEach(p => {
-        const rel = p.results.filter(r => r.category === category);
-        if (!rel.length) return;
-        rows.push(makeRow(p.id, [p.name], [p.id], [p.club], rel));
-      });
-    } else {
-      const mod = modalityById[modalityId];
-      if (mod && mod.doubles) {
-        const seen = new Set();
-        PLAYERS.forEach(p => {
-          p.results.filter(r => r.category === category && r.modality === modalityId).forEach(r => {
-            const pairKey = [p.name, r.partner].sort().join("||");
-            if (seen.has(pairKey)) return;
-            seen.add(pairKey);
-            const partner = r.partner ? playersByName[r.partner] : null;
-            const rel = [];
-            PLAYERS.forEach(pp => {
-              pp.results.filter(rr => rr.category === category && rr.modality === modalityId)
-                .forEach(rr => { if ([pp.name, rr.partner].sort().join("||") === pairKey) rel.push(rr); });
-            });
-            // de-dupe (both partners contribute the identical result rows)
-            const uniqRel = [];
-            const seenR = new Set();
-            rel.forEach(r2 => {
-              const rk = r2.fecha + "|" + r2.event;
-              if (seenR.has(rk)) return;
-              seenR.add(rk); uniqRel.push(r2);
-            });
-            rows.push(makeRow(pairKey, [p.name, r.partner], [p.id, partner ? partner.id : null],
-              partner ? [p.club, partner.club] : [p.club], uniqRel));
-          });
-        });
-      } else {
-        PLAYERS.forEach(p => {
-          const rel = p.results.filter(r => r.category === category && r.modality === modalityId);
-          if (!rel.length) return;
-          rows.push(makeRow(p.id, [p.name], [p.id], [p.club], rel));
-        });
-      }
-    }
-    return rows;
+    return RankingEngine.buildRankingRows(PLAYERS, category, modalityId, modalityById, FECHA_NUMS);
   }
-
   function rowMetric(row, fechaSel) {
-    return fechaSel === "total" ? row.total : row.byFecha[fechaSel];
+    return RankingEngine.rowMetric(row, fechaSel);
   }
-
   function sortRankingRows(rows, fechaSel) {
-    const filtered = rows.filter(r => rowMetric(r, fechaSel));
-    filtered.sort((a, b) => {
-      const ma = rowMetric(a, fechaSel), mb = rowMetric(b, fechaSel);
-      return mb.points - ma.points || mb.gold - ma.gold || mb.silver - ma.silver || a.names[0].localeCompare(b.names[0], "es");
-    });
-    let rank = 0, prevKey = null;
-    filtered.forEach((row, i) => {
-      const m = rowMetric(row, fechaSel);
-      const tieKey = m.points + "-" + m.gold + "-" + m.silver + "-" + m.bronze;
-      if (tieKey !== prevKey) rank = i + 1;
-      row.rank = rank;
-      prevKey = tieKey;
-    });
-    return filtered;
+    return RankingEngine.sortRankingRows(rows, fechaSel);
   }
-
   function playerRankIn(player, category, modalityId, fechaSel) {
-    const rows = sortRankingRows(buildRankingRows(category, modalityId), fechaSel || "total");
-    const row = rows.find(r => r.ids.includes(player.id));
-    return row ? { rank: row.rank, total: rows.length, points: rowMetric(row, fechaSel || "total").points } : null;
+    return RankingEngine.playerRankIn(PLAYERS, player, category, modalityId, modalityById, FECHA_NUMS, fechaSel);
   }
 
   /* ---------------------------------------------------------------- */
@@ -192,7 +161,7 @@
     const nextFecha = FECHAS.find(f => f.estado === "proxima");
 
     const tiles = [
-      { label: "Deportistas registrados", value: PLAYERS.length, sub: `en ${CLUBS.length} clubes federados`, color: "var(--series-1)", target: PLAYERS.length },
+      { label: "Deportistas registrados", value: PLAYERS.length, sub: `de todo Chile`, color: "var(--series-1)", target: PLAYERS.length },
       { label: "Clubes federados", value: CLUBS.length, sub: "con puntaje en el ranking oficial", color: "var(--series-6)", target: CLUBS.length },
       { label: "Puntos distribuidos", value: totalPts.toLocaleString("es-CL"), sub: "acumulados en la temporada 2026", color: "var(--brand-red-2)", target: totalPts },
       { label: "Próxima fecha", value: nextFecha ? `${nextFecha.numero}ª Fecha` : "—", sub: nextFecha ? nextFecha.fechaTexto : "", color: "var(--series-4)" },
@@ -633,11 +602,18 @@
   }
 
   function route() {
-    const hash = location.hash;
-    if (hash.startsWith("#/jugador/")) {
-      showProfile(decodeURIComponent(hash.replace("#/jugador/", "")));
-    } else {
-      showHome();
+    try {
+      const hash = location.hash;
+      if (hash.startsWith("#/jugador/")) {
+        showProfile(decodeURIComponent(hash.replace("#/jugador/", "")));
+      } else {
+        showHome();
+      }
+    } catch (err) {
+      // A malformed hash or a broken player record must not strand the
+      // visitor on a half-rendered view — fall back to the home page.
+      console.error("[RankingBadminton] Fallo navegando a", location.hash, err);
+      try { showHome(); } catch (_) { /* nothing more we can do here */ }
     }
   }
 
@@ -681,35 +657,45 @@
   /* ---------------------------------------------------------------- */
 
   function init() {
-    initTheme();
-    initMobileNav();
+    safeRender("tema y menú", () => { initTheme(); initMobileNav(); });
 
-    renderStats();
-    if (window.RankingMotion) RankingMotion.initHeroCarousel(heroSlides, renderHeroSlide);
+    safeRender("estadísticas", renderStats);
+    safeRender("carrusel de líderes", () => {
+      if (window.RankingMotion) RankingMotion.initHeroCarousel(heroSlides, renderHeroSlide);
+    });
 
-    populateRankingFilters();
-    renderRankingTable();
+    safeRender("filtros de ranking", populateRankingFilters);
+    safeRender("tabla de ranking", renderRankingTable);
 
-    renderClubsTable();
-    renderClubChart();
-    populateTopPlayersFilter();
-    renderTopPlayersChart();
+    safeRender("tabla de clubes", renderClubsTable);
+    safeRender("gráfico de clubes", renderClubChart);
+    safeRender("filtro de top deportistas", populateTopPlayersFilter);
+    safeRender("gráfico de top deportistas", renderTopPlayersChart);
 
-    populatePlayerFilters();
-    renderPlayersGrid();
+    safeRender("filtros de jugadores", populatePlayerFilters);
+    safeRender("directorio de jugadores", renderPlayersGrid);
 
-    renderCalendar();
-    renderRules();
-    renderFederation();
+    safeRender("calendario", renderCalendar);
+    safeRender("reglamento", renderRules);
+    safeRender("federación", renderFederation);
 
-    if (window.RankingMotion) {
-      RankingMotion.initScrollReveal();
-      RankingMotion.initStatCounters();
-    }
+    safeRender("animaciones", () => {
+      if (window.RankingMotion) {
+        RankingMotion.initScrollReveal();
+        RankingMotion.initStatCounters();
+      }
+    });
 
     window.addEventListener("hashchange", route);
     route();
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  whenDomReady(init);
+  } catch (err) {
+    showBootError(
+      "No se pudo cargar el Ranking Nacional correctamente. " +
+      "Intenta recargar la página; si el problema sigue, contacta al equipo técnico. " +
+      "Detalle: " + (err && err.message ? err.message : err)
+    );
+  }
 })();

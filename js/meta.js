@@ -93,13 +93,13 @@ const FEDERATION = {
     { nombre: "Facebook", url: "https://www.facebook.com/FEDEBADCHILE", icon: "facebook" },
   ],
   gerencia: [
-    { nombre: "Sara Ortega V.", cargo: "Gerente FEDEBADCHILE" },
+    { nombre: "Sara Ortega V.", cargo: "Gerente" },
     { nombre: "Cristobal Conejero U.", cargo: "Coordinador Técnico" },
     { nombre: "Tomás Bernal R.", cargo: "Coordinador de Oficina" },
     { nombre: "Ivonne Palomo A.", cargo: "Coordinadora de Difusión" },
   ],
   directiva: [
-    { nombre: "Helio Álvarez M.", cargo: "Presidente FEDEBADCHILE" },
+    { nombre: "Helio Álvarez M.", cargo: "Presidente" },
     { nombre: "Andrés Trigo A.", cargo: "Director Secretario" },
     { nombre: "Valeska Vivar M.", cargo: "Directora Tesorera" },
   ],
