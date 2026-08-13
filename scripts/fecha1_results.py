@@ -122,11 +122,11 @@ add_event("Adulto", "Dobles Masculino", "MD", "elim", 16, {
     2: [("Cristobal Miranda Rodriguez", "Bruno Mora")],
     3: [("Emmanuel Esquer Coutiño", "Angel Lorca Contreras"), ("Felipe Canario", "Ignacio Navarrete")],
     5: [("Juan Guillermo Del Pino", "Agustin Troncoso"), ("Jhon Alcons Calle", "Bastian Astudillo Quispe"),
-        ("Joaquin Bugueño Chinchilla", "Vicente Torres Huidobro"), ("Arturo Simon Burgos Quiñones", "Francisco Rojas Lemus")],
+        ("Joaquin Bugueño Chinchilla", "Vicente Torres Huidobro"), ("Simón Álvarez", "Fabian Diaz Gomez")],
 }, participation=[
     ("Ricardo Muñoz Toledo", "Matias Olagnier"), ("Clément Delvigne", "Martin Dodman"),
     ("Yeiden Ramirez Reinoso", "Gabriel Vicencio López"), ("Daniel Astudillo Opazo", "Martín Corvalán Morbiducci"),
-    ("Jose Alcayaga Contreras", "Jiahong Wang"), ("Simón Álvarez", "Fabian Diaz Gomez"),
+    ("Jose Alcayaga Contreras", "Jiahong Wang"), ("Arturo Simon Burgos Quiñones", "Francisco Rojas Lemus"),
 ])
 
 add_event("Adulto", "Dobles Femenino", "WD", "elim", 8, {

@@ -148,7 +148,7 @@ const PLAYERS = [
     "name": "Simón Álvarez",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
-    "total_points": 330,
+    "total_points": 350,
     "gold": 3,
     "silver": 0,
     "bronze": 0,
@@ -176,8 +176,8 @@ const PLAYERS = [
         "event": "MD",
         "category": "Adulto",
         "modality": "Dobles Masculino",
-        "position": null,
-        "points": 10,
+        "position": 5,
+        "points": 30,
         "partner": "Fabian Diaz Gomez"
       },
       {
@@ -218,6 +218,73 @@ const PLAYERS = [
       }
     ],
     "id": "simon-alvarez",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Fabian Diaz Gomez",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 340,
+    "gold": 3,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Simón Álvarez"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Bastian Astudillo Quispe"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Francisca Diaz Gomez"
+      }
+    ],
+    "id": "fabian-diaz-gomez",
     "color": "#2a78d6"
   },
   {
@@ -286,73 +353,6 @@ const PLAYERS = [
     ],
     "id": "cristobal-melgarejo-rozas",
     "color": "#4a3aa7"
-  },
-  {
-    "name": "Fabian Diaz Gomez",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 320,
-    "gold": 3,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto",
-      "Sub15"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": null,
-        "points": 10,
-        "partner": "Simón Álvarez"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U15",
-        "category": "Sub15",
-        "modality": "Individuales Masculino",
-        "position": 1,
-        "points": 100,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U15",
-        "category": "Sub15",
-        "modality": "Dobles Masculino",
-        "position": 1,
-        "points": 100,
-        "partner": "Bastian Astudillo Quispe"
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 1,
-        "points": 100,
-        "partner": "Francisca Diaz Gomez"
-      }
-    ],
-    "id": "fabian-diaz-gomez",
-    "color": "#2a78d6"
   },
   {
     "name": "Josefa Morales Castillo",
@@ -2182,44 +2182,6 @@ const PLAYERS = [
     "color": "#898781"
   },
   {
-    "name": "Arturo Simon Burgos Quiñones",
-    "club": "Club Bádminton Limarí",
-    "club_short": "CB Limarí",
-    "total_points": 90,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 1,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Francisco Rojas Lemus"
-      }
-    ],
-    "id": "arturo-simon-burgos-quinones",
-    "color": "#eb6834"
-  },
-  {
     "name": "Juan Guillermo Del Pino",
     "club": "Club Bádminton Esperanza de Quilpué",
     "club_short": "CB Esperanza de Quilpué",
@@ -2428,6 +2390,44 @@ const PLAYERS = [
     ],
     "id": "martin-corvalan-morbiducci",
     "color": "#e87ba4"
+  },
+  {
+    "name": "Arturo Simon Burgos Quiñones",
+    "club": "Club Bádminton Limarí",
+    "club_short": "CB Limarí",
+    "total_points": 70,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Francisco Rojas Lemus"
+      }
+    ],
+    "id": "arturo-simon-burgos-quinones",
+    "color": "#eb6834"
   },
   {
     "name": "Vicente González Candia",
@@ -2878,44 +2878,6 @@ const PLAYERS = [
     "color": "#1baf7a"
   },
   {
-    "name": "Francisco Rojas Lemus",
-    "club": "Club Bádminton Limarí",
-    "club_short": "CB Limarí",
-    "total_points": 40,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Arturo Simon Burgos Quiñones"
-      }
-    ],
-    "id": "francisco-rojas-lemus",
-    "color": "#eb6834"
-  },
-  {
     "name": "Consuelo Moscoso Cordova",
     "club": "Club Bádminton Santiago",
     "club_short": "CB Santiago",
@@ -3066,6 +3028,44 @@ const PLAYERS = [
     ],
     "id": "rafael-silva-pino",
     "color": "#e87ba4"
+  },
+  {
+    "name": "Francisco Rojas Lemus",
+    "club": "Club Bádminton Limarí",
+    "club_short": "CB Limarí",
+    "total_points": 20,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Arturo Simon Burgos Quiñones"
+      }
+    ],
+    "id": "francisco-rojas-lemus",
+    "color": "#eb6834"
   },
   {
     "name": "Javiera Villalón Vivar",
