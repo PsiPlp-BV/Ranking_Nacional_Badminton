@@ -32,25 +32,34 @@ const FECHAS = [
     nombre: "1ª Fecha — Torneo Nacional Juvenil-Adulto Santiago 2026",
     fechaTexto: "Miércoles 29 de abril al domingo 3 de mayo 2026",
     sede: "Centro de Entrenamiento Olímpico (CEO), Ñuñoa, Santiago",
+    sedeCorta: "CEO, Santiago",
     estado: "completado",
+    // `eventos` cuenta CUADROS DISPUTADOS, que es lo que reparte puntos. El
+    // torneo inscribió 20 eventos, pero GD Sub15 (3 parejas) y GD Sub19 (sin
+    // inscritas) nunca se armaron.
     eventos: 18,
-    inscritos: 66,
+    inscritos: 65,
     fuente: "Tournamentsoftware.com — Federación Chilena de Badminton",
-    fuenteUrl: "https://tournamentsoftware.com/sport/tournament.aspx?id=D252A3D7-3D1C-4B79-A53A-1B5F5BBF3F54",
+    fuenteUrl: "https://www.tournamentsoftware.com/tournament/D252A3D7-3D1C-4B79-A53A-1B5F5BBF3F54",
   },
   {
     numero: 2,
-    nombre: "2ª Fecha",
+    nombre: "2ª Fecha — Torneo Nacional Juvenil-Adulto Victoria 2026",
     fechaTexto: "Jueves 20 al domingo 23 de agosto 2026",
-    sede: "Victoria, Región de la Araucanía",
-    estado: "proxima",
-    eventos: null,
-    inscritos: null,
+    sede: "Gimnasio Municipal Bernardo Muñoz, Victoria, Región de la Araucanía",
+    sedeCorta: "Victoria, Araucanía",
+    estado: "completado",
+    // 17 cuadros de 20 eventos: XD Sub17 (2 parejas), BD Sub17 (2) y GD Sub17
+    // (1) no alcanzaron cuadro.
+    eventos: 17,
+    inscritos: 68,
+    fuente: "Tournamentsoftware.com — Federación Chilena de Badminton",
+    fuenteUrl: "https://www.tournamentsoftware.com/tournament/A35095C0-BBEF-4957-94C0-3FED545B9328",
   },
   {
     numero: 3,
     nombre: "3ª Fecha y Premiación Anual",
-    fechaTexto: "Fines de octubre / principios de noviembre 2026",
+    fechaTexto: "Miércoles 28 de octubre al domingo 1 de noviembre 2026",
     sede: "Por confirmar",
     estado: "proxima",
     eventos: null,

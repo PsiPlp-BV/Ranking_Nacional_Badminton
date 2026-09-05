@@ -13,40 +13,8 @@ and import + concatenate its EVENTS list in build_data.py. See README.md.
 """
 from build_data import make_event
 
-CLUB_MAP = {
-    "C.B. ANTOFAGASTA": "Club Bádminton Antofagasta",
-    "C.B. LIMARI": "Club Bádminton Limarí",
-    "C.B. VALPARAISO": "Club Bádminton Valparaíso",
-    "C.B. ESPERANZA DE QUILPUE": "Club Bádminton Esperanza de Quilpué",
-    "C.B. SANTIAGO": "Club Bádminton Santiago",
-    "C.D.S.C. KAIZEN": "Club Deportivo Kaizen",
-    "C. B. VICTORIA": "Club Bádminton Victoria",
-    "": "Independiente",
-}
-
-CLUB_SHORT = {
-    "Club Bádminton Antofagasta": "CB Antofagasta",
-    "Club Bádminton Limarí": "CB Limarí",
-    "Club Bádminton Valparaíso": "CB Valparaíso",
-    "Club Bádminton Esperanza de Quilpué": "CB Esperanza de Quilpué",
-    "Club Bádminton Santiago": "CB Santiago",
-    "Club Deportivo Kaizen": "CDSC Kaizen",
-    "Club Bádminton Victoria": "CB Victoria",
-    "Independiente": "Independiente",
-}
-
-# Fixed hue per club (dataviz-validated categorical palette), assigned by
-# club identity — never by current ranking position, so colors don't
-# repaint as standings change fecha to fecha.
-CLUB_COLOR = {
-    "Club Bádminton Antofagasta": "#2a78d6",
-    "Club Bádminton Limarí": "#eb6834",
-    "Club Bádminton Valparaíso": "#1baf7a",
-    "Club Bádminton Esperanza de Quilpué": "#eda100",
-    "Club Bádminton Santiago": "#e87ba4",
-    "Club Deportivo Kaizen": "#008300",
-    "Club Bádminton Victoria": "#4a3aa7",
-}
+# El catálogo de clubes (nombre oficial, sigla, color) es compartido por todas
+# las fechas y vive en scripts/clubs.py. Acá solo va el plantel de esta fecha.
 
 # name (as it appears in the draws) -> CLUB_MAP key
 NAME_CLUB = {

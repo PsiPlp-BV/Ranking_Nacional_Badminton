@@ -157,6 +157,20 @@
     document.getElementById("metaAthletes").textContent = PLAYERS.length;
     document.getElementById("metaClubs").textContent = CLUBS.length;
 
+    // Un cuadro es único por (fecha, código de evento): "MS" de la Fecha 1 y
+    // "MS" de la Fecha 2 son dos cuadros distintos.
+    const cuadros = new Set();
+    PLAYERS.forEach(p => p.results.forEach(r => cuadros.add(r.fecha + "|" + r.event)));
+    document.getElementById("metaDraws").textContent = cuadros.size;
+
+    const completadas = FECHAS.filter(f => f.estado === "completado");
+    const ultima = completadas[completadas.length - 1];
+    document.getElementById("heroFechaBadge").textContent =
+      `${completadas.length} de ${FECHAS.length} fechas completadas · Temporada 2026`;
+    document.getElementById("metaSede").innerHTML = ultima
+      ? `<strong>${ultima.numero}ª Fecha</strong>&nbsp;${ultima.sedeCorta || ultima.sede}`
+      : "";
+
     const totalPts = PLAYERS.reduce((s, p) => s + p.total_points, 0);
     const nextFecha = FECHAS.find(f => f.estado === "proxima");
 
@@ -306,14 +320,27 @@
   /* Render: Clubes                                                    */
   /* ---------------------------------------------------------------- */
 
+  // El puntaje de clubes se evalúa fecha a fecha (base 50 + inscritos +
+  // medallas + bono, todo por fecha) y el total anual es la suma. Un club que
+  // no viaja a una fecha suma 0 esa fecha: se muestra "—", no un 0 que podría
+  // leerse como "jugó y no sumó".
+  const FECHAS_JUGADAS = FECHAS.filter(f => f.estado === "completado").map(f => f.numero);
+
   function renderClubsTable() {
     const thead = `<tr>
       <th style="width:56px;">Pos</th><th>Club</th><th class="num">Atletas</th>
       <th class="num">Oro</th><th class="num">Plata</th><th class="num">Bronce</th>
-      <th class="num">Puntos F1</th><th class="num">Total</th>
+      ${FECHAS_JUGADAS.map(n => `<th class="num">F${n}</th>`).join("")}
+      <th class="num">Total</th>
     </tr>`;
     const tbody = CLUBS.map(c => {
       const rankClass = c.rank === 1 ? "top1" : c.rank === 2 ? "top2" : c.rank === 3 ? "top3" : "";
+      const fechaCells = FECHAS_JUGADAS.map(n => {
+        const pts = (c.by_fecha && c.by_fecha[n]) || 0;
+        return pts
+          ? `<td class="num">${pts}</td>`
+          : `<td class="num text-muted" title="No participó en la ${n}ª Fecha">—</td>`;
+      }).join("");
       return `
         <tr>
           <td><span class="rank-badge ${rankClass}">${c.rank}</span></td>
@@ -322,8 +349,8 @@
           <td class="num" style="color:var(--medal-gold); font-weight:700;">${c.gold}</td>
           <td class="num" style="color:var(--medal-silver); font-weight:700;">${c.silver}</td>
           <td class="num" style="color:var(--medal-bronze); font-weight:700;">${c.bronze}</td>
-          <td class="num pts-strong">${c.fecha1_points}</td>
-          <td class="num pts-strong">${c.fecha1_points}</td>
+          ${fechaCells}
+          <td class="num pts-strong">${c.total_points}</td>
         </tr>`;
     }).join("");
     const table = document.getElementById("clubTable");
@@ -332,11 +359,14 @@
   }
 
   function renderClubChart() {
+    const rotulo = FECHAS_JUGADAS.length === 1
+      ? `Fecha ${FECHAS_JUGADAS[0]}`
+      : `acumulado ${FECHAS_JUGADAS.length} fechas`;
     renderHBarChart({
       el: document.getElementById("clubChart"),
-      title: "Puntaje por club — Fecha 1",
-      subtitle: "Base + inscritos + medallas (oro 7 / plata 5 / bronce 3)",
-      data: CLUBS.map(c => ({ label: c.short, value: c.fecha1_points, color: c.color, sub: `${c.athletes} atletas` })),
+      title: `Puntaje por club — ${rotulo}`,
+      subtitle: "Base + inscritos + medallas (oro 7 / plata 5 / bronce 3), por fecha",
+      data: CLUBS.map(c => ({ label: c.short, value: c.total_points, color: c.color, sub: `${c.athletes} atletas` })),
     });
   }
 
@@ -446,7 +476,11 @@
             ${f.inscritos ? `<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="8.5" r="2.6"/><path d="M15.5 14.3c2.7.5 4.5 2.6 4.5 5.7"/></svg>${f.inscritos} inscritos</span>` : ""}
           </div>
           <div class="fecha-foot">
-            ${f.fuenteUrl ? `<a href="${f.fuenteUrl}" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Ver resultados oficiales →</a>` : `<span class="text-muted" style="font-size:13px;">Fecha y sede se confirmarán próximamente por la Federación.</span>`}
+            ${f.fuenteUrl
+              ? `<a href="${f.fuenteUrl}" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Ver resultados oficiales →</a>`
+              : `<span class="text-muted" style="font-size:13px;">${/confirmar/i.test(f.sede)
+                  ? "Sede por confirmar por la Federación."
+                  : "Resultados disponibles una vez disputada la fecha."}</span>`}
           </div>
         </div>
       </div>
@@ -529,8 +563,12 @@
     document.getElementById("profileAvatar").outerHTML =
       `<div class="avatar avatar-lg" id="profileAvatar" style="background:${p.color}">${initials(p.name)}</div>`;
     document.getElementById("profileName").textContent = p.name;
+    const fechasJugadas = [...new Set(p.results.map(r => r.fecha))].sort((a, b) => a - b);
+    const detalleFechas = fechasJugadas.length > 1
+      ? ` en ${fechasJugadas.length} fechas`
+      : fechasJugadas.length === 1 ? ` en la ${fechasJugadas[0]}ª Fecha` : "";
     document.getElementById("profileSub").innerHTML =
-      `<span class="club-tag"><span class="club-dot" style="background:${p.color}"></span>${p.club}</span> <span>· ${p.results.length} resultados registrados en Fecha 1</span>`;
+      `<span class="club-tag"><span class="club-dot" style="background:${p.color}"></span>${p.club}</span> <span>· ${p.results.length} resultados registrados${detalleFechas}</span>`;
     document.getElementById("profileBadges").innerHTML =
       p.categories.map(categoryBadgeHtml).join("") +
       p.modalities.map(m => `<span class="badge badge-soft">${modalityById[m] ? modalityById[m].label : m}</span>`).join("");
@@ -553,12 +591,15 @@
       <div class="stat-tile"><div class="stat-label">Cuadros disputados</div><div class="stat-value">${p.results.length}</div><div class="stat-delta">${p.modalities.length} modalidades distintas</div></div>
     `;
 
-    document.querySelector("#profileResultsTable tbody").innerHTML = p.results.map(r => {
+    const resultsOrdenados = [...p.results].sort((a, b) =>
+      a.fecha - b.fecha || a.category.localeCompare(b.category, "es") || a.modality.localeCompare(b.modality, "es"));
+    document.querySelector("#profileResultsTable tbody").innerHTML = resultsOrdenados.map(r => {
       const partnerHtml = r.partner
         ? (playersByName[r.partner] ? `<a class="player-link" href="#/jugador/${playersByName[r.partner].id}">${r.partner}</a>` : r.partner)
         : `<span class="text-muted">—</span>`;
       return `
         <tr>
+          <td><span class="badge badge-soft">F${r.fecha}</span></td>
           <td>${categoryBadgeHtml(r.category)}</td>
           <td>${modalityById[r.modality] ? modalityById[r.modality].label : r.modality}</td>
           <td>${partnerHtml}</td>

@@ -102,6 +102,33 @@ def compute_results(events, club_of):
     return players
 
 
+def players_for_fecha(players, fecha, club_of):
+    """
+    Recorta `players` a UNA fecha: solo quienes tienen resultados en ella, con
+    sus medallas recontadas sobre esos resultados y el club con el que
+    compitieron *esa* fecha (un deportista puede cambiar de club entre fechas).
+
+    Es el paso previo obligatorio a compute_club_scores, porque el puntaje de
+    clubes del reglamento se evalúa fecha a fecha: la base de 50, el conteo de
+    inscritos y el bono por más de 10 deportistas se pagan una vez por fecha,
+    no una vez por circuito.
+    """
+    scoped = {}
+    for name, p in players.items():
+        rel = [r for r in p["results"] if r["fecha"] == fecha]
+        if not rel:
+            continue
+        scoped[name] = dict(
+            name=name, club=club_of(name), results=rel,
+            total_points=sum(r["points"] for r in rel),
+            gold=sum(1 for r in rel if r["position"] == 1),
+            silver=sum(1 for r in rel if r["position"] == 2),
+            bronze=sum(1 for r in rel if r["position"] == 3),
+            categories=set(), modalities=set(),
+        )
+    return scoped
+
+
 def compute_club_scores(players, club_short_map, club_rules, exclude_clubs=("Independiente",)):
     """
     players -> per-club totals for ONE fecha's worth of events (base +
@@ -110,7 +137,7 @@ def compute_club_scores(players, club_short_map, club_rules, exclude_clubs=("Ind
     If `players` mixes multiple fechas' results, the medal/athlete counts
     will (correctly, per the rules being evaluated per-fecha) end up scoped
     to whatever's in `players` — callers that need a single fecha's club
-    score should filter results to that fecha before calling this.
+    score should filter results to that fecha first with players_for_fecha().
     """
     clubs = {}
 
@@ -136,11 +163,56 @@ def compute_club_scores(players, club_short_map, club_rules, exclude_clubs=("Ind
                + c["gold"] * club_rules["oro"] + c["silver"] * club_rules["plata"] + c["bronze"] * club_rules["bronce"]
                + bonus)
         scores.append(dict(name=name, short=club_short_map.get(name, name), athletes=n,
-                            gold=c["gold"], silver=c["silver"], bronze=c["bronze"], fecha1_points=pts))
-    scores.sort(key=lambda x: -x["fecha1_points"])
+                            gold=c["gold"], silver=c["silver"], bronze=c["bronze"], points=pts))
+    scores.sort(key=lambda x: -x["points"])
     for i, c in enumerate(scores, 1):
         c["rank"] = i
     return scores
+
+
+def build_club_table(players, fecha_nums, club_of_by_fecha, club_short_map, club_color_map,
+                      club_rules=None):
+    """
+    Tabla anual de clubes: el puntaje de cada fecha se calcula por separado y
+    después se suman. Un club que no viaja a una fecha simplemente suma 0 esa
+    fecha (no arrastra su base de 50).
+
+    Devuelve filas con `by_fecha` {n: puntos}, `total_points`, y los acumulados
+    de plantel y medallas de todo el circuito.
+    """
+    club_rules = club_rules or CLUB_RULES
+    per_fecha = {}
+    for n in fecha_nums:
+        scoped = players_for_fecha(players, n, club_of_by_fecha[n])
+        per_fecha[n] = {c["name"]: c for c in compute_club_scores(scoped, club_short_map, club_rules)}
+
+    rows = {}
+    for n in fecha_nums:
+        for name, c in per_fecha[n].items():
+            row = rows.setdefault(name, dict(
+                name=name, short=club_short_map.get(name, name),
+                color=club_color_map.get(name, "#898781"),
+                athletes=0, gold=0, silver=0, bronze=0,
+                by_fecha={m: 0 for m in fecha_nums}, total_points=0,
+            ))
+            row["by_fecha"][n] = c["points"]
+            row["total_points"] += c["points"]
+            row["gold"] += c["gold"]
+            row["silver"] += c["silver"]
+            row["bronze"] += c["bronze"]
+
+    # Plantel = deportistas distintos del club en todo el circuito, no la suma
+    # de inscritos por fecha (que contaría dos veces a quien compite en ambas).
+    for name, row in rows.items():
+        row["athletes"] = len({
+            pname for pname, p in players.items()
+            if any(club_of_by_fecha[r["fecha"]](pname) == name for r in p["results"])
+        })
+
+    out = sorted(rows.values(), key=lambda x: (-x["total_points"], -x["gold"], -x["silver"], x["name"]))
+    for i, c in enumerate(out, 1):
+        c["rank"] = i
+    return out
 
 
 CLUB_RULES = dict(base=50, porAtleta=1, oro=7, plata=5, bronce=3, bonusMasDe10=20)
@@ -184,34 +256,70 @@ def to_data_js(players, club_short_map, club_color_map, out_path):
     )
 
 
-def write_players_and_clubs_js(players, club_short_map, club_color_map, data_js_path, clubs_out=None):
+def write_players_and_clubs_js(players, fecha_nums, club_of_by_fecha, club_short_map,
+                                club_color_map, data_js_path):
     to_data_js(players, club_short_map, club_color_map, data_js_path)
-    scores = compute_club_scores(players, club_short_map, CLUB_RULES)
-    for c in scores:
-        c["color"] = club_color_map.get(c["name"], "#898781")
+    scores = build_club_table(players, fecha_nums, club_of_by_fecha, club_short_map, club_color_map)
     with data_js_path.open("a", encoding="utf-8") as f:
         f.write("\nconst CLUBS = " + json.dumps(scores, ensure_ascii=False, indent=2) + ";\n")
     return scores
 
 
 if __name__ == "__main__":
-    from fecha1_results import EVENTS, NAME_CLUB, CLUB_MAP, CLUB_SHORT, CLUB_COLOR
+    from clubs import CLUB_MAP, CLUB_SHORT, CLUB_COLOR
+    import fecha1_results, fecha2_results
 
-    def club_of(name):
-        code = NAME_CLUB.get(name.strip())
-        if code is None:
-            raise KeyError(f"No club mapping for {name!r} — add it to scripts/fecha1_results.py NAME_CLUB")
-        return CLUB_MAP[code]
+    # Cada fecha aporta sus cuadros y su plantel. El orden importa: para el club
+    # "actual" de un deportista gana la fecha más reciente en la que compitió.
+    FECHAS = [fecha1_results, fecha2_results]
+    FECHA_NUMS = [1, 2]
+
+    EVENTS = [ev for mod in FECHAS for ev in mod.EVENTS]
+
+    NAME_CLUB_BY_FECHA = {n: mod.NAME_CLUB for n, mod in zip(FECHA_NUMS, FECHAS)}
+    NAME_CLUB_CURRENT = {}
+    for n in FECHA_NUMS:
+        NAME_CLUB_CURRENT.update(NAME_CLUB_BY_FECHA[n])
+
+    def _resolver(name_club, where):
+        def club_of(name):
+            code = name_club.get(name.strip())
+            if code is None:
+                raise KeyError(f"No club mapping for {name!r} — agrégalo a NAME_CLUB en {where}")
+            return CLUB_MAP[code]
+        return club_of
+
+    club_of = _resolver(NAME_CLUB_CURRENT, "el fechaN_results.py correspondiente")
+    club_of_by_fecha = {
+        n: _resolver(NAME_CLUB_BY_FECHA[n], f"scripts/fecha{n}_results.py")
+        for n in FECHA_NUMS
+    }
 
     players = compute_results(EVENTS, club_of)
-    print(f"Deportistas con resultados: {len(players)}")
+    print(f"Cuadros: {len(EVENTS)}  |  Deportistas con resultados: {len(players)}")
+
+    cambios = [
+        (n, NAME_CLUB_BY_FECHA[1][n], NAME_CLUB_BY_FECHA[2][n])
+        for n in NAME_CLUB_BY_FECHA[1]
+        if n in NAME_CLUB_BY_FECHA[2] and NAME_CLUB_BY_FECHA[1][n] != NAME_CLUB_BY_FECHA[2][n]
+    ]
+    if cambios:
+        print()
+        print("=== CAMBIOS DE CLUB ENTRE FECHAS ===")
+        for name, a, b in cambios:
+            print(f"  {name}: {CLUB_MAP[a]} -> {CLUB_MAP[b]}")
 
     out = ROOT / "js" / "data.js"
-    scores = write_players_and_clubs_js(players, CLUB_SHORT, CLUB_COLOR, out)
+    scores = write_players_and_clubs_js(players, FECHA_NUMS, club_of_by_fecha,
+                                        CLUB_SHORT, CLUB_COLOR, out)
 
+    print()
     print(f"Escrito {out}")
     print()
     print("=== RANKING DE CLUBES ===")
+    cols = "  ".join(f"F{n}" for n in FECHA_NUMS)
+    print(f"{'':3s}{'club':38s} {cols:>10s}   total   (plantel/medallas del circuito)")
     for c in scores:
-        print(f"{c['rank']}. {c['name']:38s} {c['fecha1_points']:4d} pts  "
+        por_fecha = "  ".join(f"{c['by_fecha'][n]:3d}" for n in FECHA_NUMS)
+        print(f"{c['rank']}. {c['name']:38s} {por_fecha}   {c['total_points']:5d}   "
               f"(atletas={c['athletes']} oro={c['gold']} plata={c['silver']} bronce={c['bronze']})")

@@ -9,7 +9,8 @@ Run:
 """
 import unittest
 
-from build_data import points_for, compute_results, compute_club_scores, make_event, CLUB_RULES
+from build_data import (points_for, compute_results, compute_club_scores, make_event,
+                        players_for_fecha, build_club_table, CLUB_RULES)
 
 
 class PointsForTests(unittest.TestCase):
@@ -99,7 +100,7 @@ class ClubScoreTests(unittest.TestCase):
         scores = compute_club_scores(players, {"Club Uno": "C1"}, CLUB_RULES)
         club = scores[0]
         # base 50 + 2 athletes + 1 gold*7 + 1 silver*5 = 50+2+7+5 = 64
-        self.assertEqual(club["fecha1_points"], 64)
+        self.assertEqual(club["points"], 64)
         self.assertEqual(club["athletes"], 2)
 
     def test_bonus_for_more_than_ten_athletes(self):
@@ -110,7 +111,7 @@ class ClubScoreTests(unittest.TestCase):
         scores = compute_club_scores(players, {}, CLUB_RULES)
         self.assertEqual(scores[0]["athletes"], 12)
         # base 50 + 12 athletes + 1 gold*7 + 20 bonus (>10 athletes) = 89
-        self.assertEqual(scores[0]["fecha1_points"], 89)
+        self.assertEqual(scores[0]["points"], 89)
 
     def test_independiente_excluded_from_club_ranking(self):
         events = [make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]})]
@@ -129,6 +130,79 @@ class ClubScoreTests(unittest.TestCase):
         self.assertEqual(scores[0]["name"], "Club A")
         self.assertEqual(scores[0]["rank"], 1)
         self.assertEqual(scores[1]["rank"], 2)
+
+
+class MultiFechaClubTests(unittest.TestCase):
+    """
+    El puntaje de clubes se evalúa POR FECHA y después se suma. Estos tests
+    existen porque el error fácil es calcularlo una vez sobre todo el circuito:
+    eso cobraría la base de 50 y el bono por plantel una sola vez, y le daría
+    puntos de una fecha a un club que ni siquiera viajó.
+    """
+
+    def _table(self, events, club_by_fecha, fecha_nums=(1, 2)):
+        current = {}
+        for n in fecha_nums:
+            current.update({k: v for k, v in club_by_fecha[n].items()})
+        players = compute_results(events, lambda n: current[n])
+        resolvers = {n: (lambda m: (lambda name: m[name]))(club_by_fecha[n]) for n in fecha_nums}
+        table = build_club_table(players, list(fecha_nums), resolvers, {}, {})
+        return {c["name"]: c for c in table}
+
+    def test_base_is_charged_once_per_fecha(self):
+        events = [
+            make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)], 2: [("Beto",)]}),
+            make_event(2, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]}),
+        ]
+        by = {1: {"Ana": "Club Uno", "Beto": "Club Uno"}, 2: {"Ana": "Club Uno", "Beto": "Club Uno"}}
+        uno = self._table(events, by)["Club Uno"]
+        self.assertEqual(uno["by_fecha"][1], 64, "50 base + 2 inscritos + oro 7 + plata 5")
+        self.assertEqual(uno["by_fecha"][2], 58, "50 base + 1 inscrito + oro 7")
+        self.assertEqual(uno["total_points"], 122, "el total es la suma de las fechas, no un cálculo global")
+
+    def test_club_absent_from_a_fecha_scores_zero_there(self):
+        events = [
+            make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)], 2: [("Zoe",)]}),
+            make_event(2, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]}),
+        ]
+        by = {1: {"Ana": "Club Uno", "Zoe": "Club Dos"}, 2: {"Ana": "Club Uno", "Zoe": "Club Dos"}}
+        dos = self._table(events, by)["Club Dos"]
+        self.assertEqual(dos["by_fecha"][2], 0, "no viajó a la fecha 2: no cobra la base de 50")
+        self.assertEqual(dos["total_points"], dos["by_fecha"][1])
+
+    def test_athletes_counts_distinct_people_not_entries_per_fecha(self):
+        events = [
+            make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]}),
+            make_event(2, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]}),
+        ]
+        by = {1: {"Ana": "Club Uno"}, 2: {"Ana": "Club Uno"}}
+        self.assertEqual(self._table(events, by)["Club Uno"]["athletes"], 1,
+                          "quien compite en las dos fechas es un deportista, no dos")
+
+    def test_club_change_credits_each_fecha_to_the_right_club(self):
+        events = [
+            make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]}),
+            make_event(2, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]}),
+        ]
+        by = {1: {"Ana": "Club A"}, 2: {"Ana": "Club B"}}
+        table = self._table(events, by)
+        self.assertEqual(table["Club A"]["by_fecha"][1], 58)
+        self.assertEqual(table["Club A"]["by_fecha"][2], 0)
+        self.assertEqual(table["Club B"]["by_fecha"][1], 0)
+        self.assertEqual(table["Club B"]["by_fecha"][2], 58)
+        self.assertEqual(table["Club A"]["gold"], 1, "el oro de la fecha 1 queda con el club de la fecha 1")
+        self.assertEqual(table["Club B"]["gold"], 1)
+
+    def test_players_for_fecha_recounts_medals_within_the_fecha(self):
+        events = [
+            make_event(1, "Cat", "Individuales Masculino", "MS", "elim", 4, {1: [("Ana",)]}),
+            make_event(2, "Cat", "Individuales Masculino", "MS", "elim", 4, {2: [("Ana",)]}),
+        ]
+        players = compute_results(events, identity_club)
+        f2 = players_for_fecha(players, 2, identity_club)
+        self.assertEqual(f2["Ana"]["gold"], 0, "el oro fue en la fecha 1, no debe contarse en la 2")
+        self.assertEqual(f2["Ana"]["silver"], 1)
+        self.assertEqual(f2["Ana"]["total_points"], 80)
 
 
 if __name__ == "__main__":

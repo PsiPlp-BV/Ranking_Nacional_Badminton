@@ -5,9 +5,9 @@ const PLAYERS = [
     "name": "Felipe Canario",
     "club": "Club Deportivo Kaizen",
     "club_short": "CDSC Kaizen",
-    "total_points": 500,
-    "gold": 2,
-    "silver": 3,
+    "total_points": 1000,
+    "gold": 3,
+    "silver": 8,
     "bronze": 1,
     "categories": [
       "Adulto",
@@ -72,6 +72,60 @@ const PLAYERS = [
         "position": 1,
         "points": 100,
         "partner": "Francisca Riquelme"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Nicolas Monne"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Vania Diaz"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Wei Quan Oscar Cen He"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Francisca Riquelme"
       }
     ],
     "id": "felipe-canario",
@@ -81,10 +135,10 @@ const PLAYERS = [
     "name": "Francisca Riquelme",
     "club": "Club Deportivo Kaizen",
     "club_short": "CDSC Kaizen",
-    "total_points": 350,
-    "gold": 2,
+    "total_points": 770,
+    "gold": 5,
     "silver": 0,
-    "bronze": 2,
+    "bronze": 3,
     "categories": [
       "Adulto",
       "Sub19"
@@ -139,22 +193,544 @@ const PLAYERS = [
         "position": 1,
         "points": 100,
         "partner": "Felipe Canario"
+      },
+      {
+        "fecha": 2,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Andrea Montero Sanchez"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Ignacio Navarrete"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Josefina Reyes"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Felipe Canario"
       }
     ],
     "id": "francisca-riquelme",
     "color": "#008300"
   },
   {
+    "name": "Josefina Reyes",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 760,
+    "gold": 3,
+    "silver": 3,
+    "bronze": 3,
+    "categories": [
+      "Adulto",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Francisca Riquelme"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Agustin Troncoso"
+      },
+      {
+        "fecha": 1,
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "XD U17",
+        "category": "Sub17",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Agustin Troncoso"
+      },
+      {
+        "fecha": 2,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Vania Diaz"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Angel Lorca Contreras"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Francisca Riquelme"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Angel Lorca Contreras"
+      }
+    ],
+    "id": "josefina-reyes",
+    "color": "#008300"
+  },
+  {
+    "name": "Fabian Diaz Gomez",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 710,
+    "gold": 6,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto",
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Simón Álvarez"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Bastian Astudillo Quispe"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Francisca Diaz Gomez"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Simón Álvarez"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Bastian Astudillo Quispe"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Antonia Cardona"
+      }
+    ],
+    "id": "fabian-diaz-gomez",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Angel Lorca Contreras",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 680,
+    "gold": 1,
+    "silver": 2,
+    "bronze": 6,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Emmanuel Esquer Coutiño"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Emmanuel Esquer Coutiño"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Emilia Gonzalez"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Emmanuel Esquer Coutiño"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Josefina Reyes"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Emmanuel Esquer Coutiño"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Josefina Reyes"
+      }
+    ],
+    "id": "angel-lorca-contreras",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Cristóbal Melgarejo Rozas",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 610,
+    "gold": 2,
+    "silver": 1,
+    "bronze": 4,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Wei Quan Oscar Cen He"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 4,
+        "points": 50,
+        "partner": "Wei Quan Oscar Cen He"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Nicole Pantoja Sepúlveda"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Daniel Cortez"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Vicente Torres Huidobro"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Nicole Pantoja Sepúlveda"
+      }
+    ],
+    "id": "cristobal-melgarejo-rozas",
+    "color": "#4a3aa7"
+  },
+  {
     "name": "Simón Álvarez",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
-    "total_points": 350,
-    "gold": 3,
+    "total_points": 610,
+    "gold": 4,
     "silver": 0,
-    "bronze": 0,
+    "bronze": 2,
     "categories": [
       "Adulto",
-      "Sub17"
+      "Sub17",
+      "Sub19"
     ],
     "modalities": [
       "Dobles Masculino",
@@ -215,18 +791,242 @@ const PLAYERS = [
         "position": 1,
         "points": 100,
         "partner": "Josefa Morales Castillo"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Fabian Diaz Gomez"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Camila Macaya"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Gabriel Ponce Barra"
       }
     ],
     "id": "simon-alvarez",
     "color": "#2a78d6"
   },
   {
-    "name": "Fabian Diaz Gomez",
+    "name": "Ashley Montre Rubilar",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 600,
+    "gold": 6,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Vania Diaz"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Bruno Mora"
+      },
+      {
+        "fecha": 2,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Camila Macaya"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Bruno Mora"
+      }
+    ],
+    "id": "ashley-montre-rubilar",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Nicole Pantoja Sepúlveda",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 550,
+    "gold": 0,
+    "silver": 4,
+    "bronze": 2,
+    "categories": [
+      "Adulto",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Javiera Pantoja Andrades"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Vicente Torres Huidobro"
+      },
+      {
+        "fecha": 1,
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Cristóbal Melgarejo Rozas"
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": "Javiera Pantoja Andrades"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Vicente Torres Huidobro"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Martina Medina"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Cristóbal Melgarejo Rozas"
+      }
+    ],
+    "id": "nicole-pantoja-sepulveda",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Bastian Astudillo Quispe",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
-    "total_points": 340,
-    "gold": 3,
-    "silver": 0,
+    "total_points": 530,
+    "gold": 2,
+    "silver": 3,
     "bronze": 0,
     "categories": [
       "Adulto",
@@ -254,15 +1054,15 @@ const PLAYERS = [
         "modality": "Dobles Masculino",
         "position": 5,
         "points": 30,
-        "partner": "Simón Álvarez"
+        "partner": "Jhon Alcons Calle"
       },
       {
         "fecha": 1,
         "event": "BS U15",
         "category": "Sub15",
         "modality": "Individuales Masculino",
-        "position": 1,
-        "points": 100,
+        "position": 2,
+        "points": 80,
         "partner": null
       },
       {
@@ -272,7 +1072,242 @@ const PLAYERS = [
         "modality": "Dobles Masculino",
         "position": 1,
         "points": 100,
-        "partner": "Bastian Astudillo Quispe"
+        "partner": "Fabian Diaz Gomez"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Emilia Perez"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Jhon Alcons Calle"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Fabian Diaz Gomez"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Ashlyn Alcons"
+      }
+    ],
+    "id": "bastian-astudillo-quispe",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Bruno Mora",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 510,
+    "gold": 4,
+    "silver": 1,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Cristobal Miranda Rodriguez"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Ashley Montre Rubilar"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Vicente Torres Huidobro"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Ashley Montre Rubilar"
+      }
+    ],
+    "id": "bruno-mora",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Vania Diaz",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 500,
+    "gold": 1,
+    "silver": 5,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Ashley Montre Rubilar"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Felipe Canario"
+      },
+      {
+        "fecha": 2,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Josefina Reyes"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Felipe Canario"
+      }
+    ],
+    "id": "vania-diaz",
+    "color": "#008300"
+  },
+  {
+    "name": "Francisca Diaz Gomez",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 490,
+    "gold": 3,
+    "silver": 2,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
       },
       {
         "fecha": 1,
@@ -281,17 +1316,373 @@ const PLAYERS = [
         "modality": "Dobles Mixto",
         "position": 1,
         "points": 100,
-        "partner": "Francisca Diaz Gomez"
+        "partner": "Fabian Diaz Gomez"
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Antonia Cardona"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Antonia Cardona"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Jeronimo Cardona"
       }
     ],
-    "id": "fabian-diaz-gomez",
+    "id": "francisca-diaz-gomez",
     "color": "#2a78d6"
   },
   {
-    "name": "Cristóbal Melgarejo Rozas",
-    "club": "Club Bádminton Victoria",
-    "club_short": "CB Victoria",
-    "total_points": 320,
+    "name": "Gabriel Ponce Barra",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 460,
+    "gold": 1,
+    "silver": 2,
+    "bronze": 2,
+    "categories": [
+      "Adulto",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U17",
+        "category": "Sub17",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Simón Álvarez"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U17",
+        "category": "Sub17",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Alexandra Campusano Molina"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Cristobal Miranda Rodriguez"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Sarai Espinoza Manquecura"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Simón Álvarez"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Sarai Espinoza Manquecura"
+      }
+    ],
+    "id": "gabriel-ponce-barra",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Agustin Troncoso",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 450,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 4,
+    "categories": [
+      "Adulto",
+      "Sub15",
+      "Sub17"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Juan Guillermo Del Pino"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Josefina Reyes"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Haofeng Luo Wo"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U17",
+        "category": "Sub17",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Josefina Reyes"
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Gaspar Ponce"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Emilia Perez"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      }
+    ],
+    "id": "agustin-troncoso",
+    "color": "#008300"
+  },
+  {
+    "name": "Vicente Torres Huidobro",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 430,
+    "gold": 2,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Joaquin Bugueño Chinchilla"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Nicole Pantoja Sepúlveda"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Joaquin Bugueño Chinchilla"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Bruno Mora"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Nicole Pantoja Sepúlveda"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Cristóbal Melgarejo Rozas"
+      }
+    ],
+    "id": "vicente-torres-huidobro",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Wei Quan Oscar Cen He",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 420,
     "gold": 1,
     "silver": 1,
     "bronze": 1,
@@ -310,8 +1701,8 @@ const PLAYERS = [
         "event": "MS",
         "category": "Adulto",
         "modality": "Individuales Masculino",
-        "position": 3,
-        "points": 60,
+        "position": null,
+        "points": 10,
         "partner": null
       },
       {
@@ -321,15 +1712,15 @@ const PLAYERS = [
         "modality": "Dobles Masculino",
         "position": 1,
         "points": 100,
-        "partner": "Wei Quan Oscar Cen He"
+        "partner": "Cristóbal Melgarejo Rozas"
       },
       {
         "fecha": 1,
         "event": "BS U19",
         "category": "Sub19",
         "modality": "Individuales Masculino",
-        "position": 5,
-        "points": 30,
+        "position": 3,
+        "points": 60,
         "partner": null
       },
       {
@@ -339,20 +1730,490 @@ const PLAYERS = [
         "modality": "Dobles Masculino",
         "position": 4,
         "points": 50,
-        "partner": "Wei Quan Oscar Cen He"
+        "partner": "Cristóbal Melgarejo Rozas"
       },
       {
-        "fecha": 1,
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Ignacio Navarrete"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Felipe Canario"
+      },
+      {
+        "fecha": 2,
         "event": "XD U19",
         "category": "Sub19",
         "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Nicole Pantoja Sepúlveda"
+        "position": 5,
+        "points": 30,
+        "partner": "Emilia Gonzalez"
       }
     ],
-    "id": "cristobal-melgarejo-rozas",
-    "color": "#4a3aa7"
+    "id": "wei-quan-oscar-cen-he",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Emmanuel Esquer Coutiño",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 370,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 5,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Angel Lorca Contreras"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Angel Lorca Contreras"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Angel Lorca Contreras"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Angel Lorca Contreras"
+      }
+    ],
+    "id": "emmanuel-esquer-coutino",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Antonia Cardona",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 360,
+    "gold": 3,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Francisca Diaz Gomez"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Francisca Diaz Gomez"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 1,
+        "points": 100,
+        "partner": "Fabian Diaz Gomez"
+      }
+    ],
+    "id": "antonia-cardona",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Consuelo Valdebenito",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 360,
+    "gold": 0,
+    "silver": 3,
+    "bronze": 1,
+    "categories": [
+      "Sub15",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Derek Oses"
+      },
+      {
+        "fecha": 1,
+        "event": "GD U17",
+        "category": "Sub17",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Emilia Perez"
+      },
+      {
+        "fecha": 1,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Emilia Perez"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Gaspar Ponce"
+      }
+    ],
+    "id": "consuelo-valdebenito",
+    "color": "#008300"
+  },
+  {
+    "name": "Emilia Perez",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 360,
+    "gold": 0,
+    "silver": 3,
+    "bronze": 1,
+    "categories": [
+      "Sub15",
+      "Sub17"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Bastian Astudillo Quispe"
+      },
+      {
+        "fecha": 1,
+        "event": "GD U17",
+        "category": "Sub17",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Consuelo Valdebenito"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Consuelo Valdebenito"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Agustin Troncoso"
+      }
+    ],
+    "id": "emilia-perez",
+    "color": "#008300"
+  },
+  {
+    "name": "Ignacio Navarrete",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 350,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 1,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Felipe Canario"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Francisca Riquelme"
+      },
+      {
+        "fecha": 1,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Felipe Canario"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Wei Quan Oscar Cen He"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Francisca Riquelme"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Matias Lema"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Sofia Tello"
+      }
+    ],
+    "id": "ignacio-navarrete",
+    "color": "#008300"
   },
   {
     "name": "Josefa Morales Castillo",
@@ -431,15 +2292,16 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
-    "name": "Ashley Montre Rubilar",
-    "club": "Club Bádminton Victoria",
-    "club_short": "CB Victoria",
+    "name": "Amanda Senn",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
     "total_points": 300,
-    "gold": 3,
-    "silver": 0,
-    "bronze": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 1,
     "categories": [
-      "Adulto"
+      "Sub15",
+      "Sub17"
     ],
     "modalities": [
       "Dobles Femenino",
@@ -449,101 +2311,61 @@ const PLAYERS = [
     "results": [
       {
         "fecha": 1,
-        "event": "WS",
-        "category": "Adulto",
-        "modality": "Individuales Femenino",
-        "position": 1,
-        "points": 100,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 1,
-        "points": 100,
-        "partner": "Vania Diaz"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 1,
-        "points": 100,
-        "partner": "Bruno Mora"
-      }
-    ],
-    "id": "ashley-montre-rubilar",
-    "color": "#4a3aa7"
-  },
-  {
-    "name": "Bastian Astudillo Quispe",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 300,
-    "gold": 1,
-    "silver": 2,
-    "bronze": 0,
-    "categories": [
-      "Adulto",
-      "Sub15"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Jhon Alcons Calle"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U15",
+        "event": "GS U15",
         "category": "Sub15",
-        "modality": "Individuales Masculino",
+        "modality": "Individuales Femenino",
         "position": 2,
         "points": 80,
         "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U15",
-        "category": "Sub15",
-        "modality": "Dobles Masculino",
-        "position": 1,
-        "points": 100,
-        "partner": "Fabian Diaz Gomez"
       },
       {
         "fecha": 1,
         "event": "XD U15",
         "category": "Sub15",
         "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Emilia Perez"
+        "position": 4,
+        "points": 50,
+        "partner": "Felipe Saez Zurita"
+      },
+      {
+        "fecha": 1,
+        "event": "GD U17",
+        "category": "Sub17",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Fabiola Neumann"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": "Fabiola Neumann"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Felipe Saez Zurita"
       }
     ],
-    "id": "bastian-astudillo-quispe",
-    "color": "#2a78d6"
+    "id": "amanda-senn",
+    "color": "#008300"
   },
   {
     "name": "Alexandra Campusano Molina",
@@ -622,131 +2444,15 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
-    "name": "Angel Lorca Contreras",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 290,
-    "gold": 0,
-    "silver": 1,
-    "bronze": 3,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": "Emmanuel Esquer Coutiño"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U19",
-        "category": "Sub19",
-        "modality": "Dobles Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": "Emmanuel Esquer Coutiño"
-      },
-      {
-        "fecha": 1,
-        "event": "XD U19",
-        "category": "Sub19",
-        "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
-        "partner": "Emilia Gonzalez"
-      }
-    ],
-    "id": "angel-lorca-contreras",
-    "color": "#e87ba4"
-  },
-  {
-    "name": "Bruno Mora",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
+    "name": "Andrea Montero Sanchez",
+    "club": "Club Bádminton Concón",
+    "club_short": "CB Concón",
     "total_points": 280,
-    "gold": 2,
-    "silver": 1,
-    "bronze": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 4,
     "categories": [
       "Adulto"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": 1,
-        "points": 100,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": "Cristobal Miranda Rodriguez"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 1,
-        "points": 100,
-        "partner": "Ashley Montre Rubilar"
-      }
-    ],
-    "id": "bruno-mora",
-    "color": "#2a78d6"
-  },
-  {
-    "name": "Josefina Reyes",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 280,
-    "gold": 1,
-    "silver": 1,
-    "bronze": 1,
-    "categories": [
-      "Adulto",
-      "Sub17"
     ],
     "modalities": [
       "Dobles Femenino",
@@ -770,7 +2476,7 @@ const PLAYERS = [
         "modality": "Dobles Femenino",
         "position": 3,
         "points": 60,
-        "partner": "Francisca Riquelme"
+        "partner": "Vadot Elise"
       },
       {
         "fecha": 1,
@@ -779,42 +2485,210 @@ const PLAYERS = [
         "modality": "Dobles Mixto",
         "position": null,
         "points": 10,
-        "partner": "Agustin Troncoso"
+        "partner": "Daniel Astudillo Opazo"
       },
       {
-        "fecha": 1,
-        "event": "GS U17",
-        "category": "Sub17",
+        "fecha": 2,
+        "event": "WS",
+        "category": "Adulto",
         "modality": "Individuales Femenino",
-        "position": 1,
-        "points": 100,
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Francisca Riquelme"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Daniel Astudillo Opazo"
+      }
+    ],
+    "id": "andrea-montero-sanchez",
+    "color": "#8a5a3c"
+  },
+  {
+    "name": "Fabiola Neumann",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 260,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 2,
+    "categories": [
+      "Sub15",
+      "Sub17"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
         "partner": null
       },
       {
         "fecha": 1,
-        "event": "XD U17",
-        "category": "Sub17",
+        "event": "XD U15",
+        "category": "Sub15",
         "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Agustin Troncoso"
+        "position": 5,
+        "points": 30,
+        "partner": "Haofeng Luo Wo"
+      },
+      {
+        "fecha": 1,
+        "event": "GD U17",
+        "category": "Sub17",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Amanda Senn"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": "Amanda Senn"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Derek Oses"
       }
     ],
-    "id": "josefina-reyes",
+    "id": "fabiola-neumann",
     "color": "#008300"
   },
   {
-    "name": "Agustin Troncoso",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 270,
+    "name": "Sarai Espinoza Manquecura",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 260,
     "gold": 0,
-    "silver": 2,
+    "silver": 0,
     "bronze": 1,
     "categories": [
       "Adulto",
-      "Sub15",
-      "Sub17"
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 4,
+        "points": 50,
+        "partner": "Joaquin Bugueño Chinchilla"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Gabriel Ponce Barra"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": "Sofia Tello"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Gabriel Ponce Barra"
+      }
+    ],
+    "id": "sarai-espinoza-manquecura",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Felipe Saez Zurita",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 230,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Sub15"
     ],
     "modalities": [
       "Dobles Masculino",
@@ -822,33 +2696,6 @@ const PLAYERS = [
       "Individuales Masculino"
     ],
     "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Juan Guillermo Del Pino"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": null,
-        "points": 10,
-        "partner": "Josefina Reyes"
-      },
       {
         "fecha": 1,
         "event": "BS U15",
@@ -863,226 +2710,48 @@ const PLAYERS = [
         "event": "BD U15",
         "category": "Sub15",
         "modality": "Dobles Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": "Haofeng Luo Wo"
+        "position": 4,
+        "points": 50,
+        "partner": "Derek Oses"
       },
-      {
-        "fecha": 1,
-        "event": "XD U17",
-        "category": "Sub17",
-        "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Josefina Reyes"
-      }
-    ],
-    "id": "agustin-troncoso",
-    "color": "#008300"
-  },
-  {
-    "name": "Vania Diaz",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 260,
-    "gold": 1,
-    "silver": 2,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WS",
-        "category": "Adulto",
-        "modality": "Individuales Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 1,
-        "points": 100,
-        "partner": "Ashley Montre Rubilar"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Felipe Canario"
-      }
-    ],
-    "id": "vania-diaz",
-    "color": "#008300"
-  },
-  {
-    "name": "Nicole Pantoja Sepúlveda",
-    "club": "Club Bádminton Victoria",
-    "club_short": "CB Victoria",
-    "total_points": 250,
-    "gold": 0,
-    "silver": 2,
-    "bronze": 1,
-    "categories": [
-      "Adulto",
-      "Sub17",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 5,
-        "points": 30,
-        "partner": "Javiera Pantoja Andrades"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
-        "partner": "Vicente Torres Huidobro"
-      },
-      {
-        "fecha": 1,
-        "event": "GS U17",
-        "category": "Sub17",
-        "modality": "Individuales Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U19",
-        "category": "Sub19",
-        "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Cristóbal Melgarejo Rozas"
-      }
-    ],
-    "id": "nicole-pantoja-sepulveda",
-    "color": "#4a3aa7"
-  },
-  {
-    "name": "Gabriel Ponce Barra",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 240,
-    "gold": 1,
-    "silver": 1,
-    "bronze": 1,
-    "categories": [
-      "Sub17"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "BS U17",
-        "category": "Sub17",
-        "modality": "Individuales Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U17",
-        "category": "Sub17",
-        "modality": "Dobles Masculino",
-        "position": 1,
-        "points": 100,
-        "partner": "Simón Álvarez"
-      },
-      {
-        "fecha": 1,
-        "event": "XD U17",
-        "category": "Sub17",
-        "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
-        "partner": "Alexandra Campusano Molina"
-      }
-    ],
-    "id": "gabriel-ponce-barra",
-    "color": "#2a78d6"
-  },
-  {
-    "name": "Consuelo Valdebenito",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 220,
-    "gold": 0,
-    "silver": 2,
-    "bronze": 1,
-    "categories": [
-      "Sub15",
-      "Sub17",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
       {
         "fecha": 1,
         "event": "XD U15",
         "category": "Sub15",
         "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
+        "position": 4,
+        "points": 50,
+        "partner": "Amanda Senn"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
         "partner": "Derek Oses"
       },
       {
-        "fecha": 1,
-        "event": "GD U17",
-        "category": "Sub17",
-        "modality": "Dobles Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": "Emilia Perez"
-      },
-      {
-        "fecha": 1,
-        "event": "GS U19",
-        "category": "Sub19",
-        "modality": "Individuales Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": null
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Amanda Senn"
       }
     ],
-    "id": "consuelo-valdebenito",
+    "id": "felipe-saez-zurita",
     "color": "#008300"
   },
   {
@@ -1153,332 +2822,90 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
-    "name": "Wei Quan Oscar Cen He",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 220,
-    "gold": 1,
-    "silver": 0,
-    "bronze": 1,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 1,
-        "points": 100,
-        "partner": "Cristóbal Melgarejo Rozas"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U19",
-        "category": "Sub19",
-        "modality": "Dobles Masculino",
-        "position": 4,
-        "points": 50,
-        "partner": "Cristóbal Melgarejo Rozas"
-      }
-    ],
-    "id": "wei-quan-oscar-cen-he",
-    "color": "#e87ba4"
-  },
-  {
-    "name": "Emilia Perez",
+    "name": "Derek Oses",
     "club": "Club Deportivo Kaizen",
     "club_short": "CDSC Kaizen",
     "total_points": 210,
     "gold": 0,
-    "silver": 2,
-    "bronze": 0,
-    "categories": [
-      "Sub15",
-      "Sub17"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "GS U15",
-        "category": "Sub15",
-        "modality": "Individuales Femenino",
-        "position": 4,
-        "points": 50,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 2,
-        "points": 80,
-        "partner": "Bastian Astudillo Quispe"
-      },
-      {
-        "fecha": 1,
-        "event": "GD U17",
-        "category": "Sub17",
-        "modality": "Dobles Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": "Consuelo Valdebenito"
-      }
-    ],
-    "id": "emilia-perez",
-    "color": "#008300"
-  },
-  {
-    "name": "Emmanuel Esquer Coutiño",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 210,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 3,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": "Angel Lorca Contreras"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U19",
-        "category": "Sub19",
-        "modality": "Dobles Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": "Angel Lorca Contreras"
-      }
-    ],
-    "id": "emmanuel-esquer-coutino",
-    "color": "#e87ba4"
-  },
-  {
-    "name": "Vicente Torres Huidobro",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 210,
-    "gold": 1,
     "silver": 0,
     "bronze": 1,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Joaquin Bugueño Chinchilla"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
-        "partner": "Nicole Pantoja Sepúlveda"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U19",
-        "category": "Sub19",
-        "modality": "Dobles Masculino",
-        "position": 1,
-        "points": 100,
-        "partner": "Joaquin Bugueño Chinchilla"
-      }
-    ],
-    "id": "vicente-torres-huidobro",
-    "color": "#2a78d6"
-  },
-  {
-    "name": "Francisca Diaz Gomez",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 200,
-    "gold": 2,
-    "silver": 0,
-    "bronze": 0,
     "categories": [
       "Sub15"
     ],
     "modalities": [
+      "Dobles Masculino",
       "Dobles Mixto",
-      "Individuales Femenino"
+      "Individuales Masculino"
     ],
     "results": [
       {
         "fecha": 1,
-        "event": "GS U15",
+        "event": "BS U15",
         "category": "Sub15",
-        "modality": "Individuales Femenino",
-        "position": 1,
-        "points": 100,
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
         "partner": null
       },
       {
         "fecha": 1,
-        "event": "XD U15",
+        "event": "BD U15",
         "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 1,
-        "points": 100,
-        "partner": "Fabian Diaz Gomez"
-      }
-    ],
-    "id": "francisca-diaz-gomez",
-    "color": "#2a78d6"
-  },
-  {
-    "name": "Amanda Senn",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 190,
-    "gold": 0,
-    "silver": 1,
-    "bronze": 1,
-    "categories": [
-      "Sub15",
-      "Sub17"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "GS U15",
-        "category": "Sub15",
-        "modality": "Individuales Femenino",
-        "position": 2,
-        "points": 80,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
+        "modality": "Dobles Masculino",
         "position": 4,
         "points": 50,
         "partner": "Felipe Saez Zurita"
       },
       {
         "fecha": 1,
-        "event": "GD U17",
-        "category": "Sub17",
-        "modality": "Dobles Femenino",
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
         "position": 3,
         "points": 60,
+        "partner": "Consuelo Valdebenito"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Felipe Saez Zurita"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
         "partner": "Fabiola Neumann"
       }
     ],
-    "id": "amanda-senn",
+    "id": "derek-oses",
     "color": "#008300"
   },
   {
-    "name": "Ignacio Navarrete",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 190,
+    "name": "Vicente Rivera",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 200,
     "gold": 0,
     "silver": 1,
-    "bronze": 1,
+    "bronze": 2,
     "categories": [
-      "Adulto",
+      "Sub15",
       "Sub19"
     ],
     "modalities": [
@@ -1488,7 +2915,122 @@ const PLAYERS = [
     ],
     "results": [
       {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Amaro Valdebenito"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Beatriz Palma"
+      }
+    ],
+    "id": "vicente-rivera",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Martina Medina",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 190,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 0,
+    "categories": [
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 2,
+        "points": 80,
+        "partner": "Nicole Pantoja Sepúlveda"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Matias Lema"
+      }
+    ],
+    "id": "martina-medina",
+    "color": "#008300"
+  },
+  {
+    "name": "Steven Jialuo Li Zhong",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 190,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 2,
+    "categories": [
+      "Adulto",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
         "fecha": 1,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U17",
+        "category": "Sub17",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Teo Arentsen Piracés"
+      },
+      {
+        "fecha": 2,
         "event": "MS",
         "category": "Adulto",
         "modality": "Individuales Masculino",
@@ -1497,44 +3039,237 @@ const PLAYERS = [
         "partner": null
       },
       {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
+        "fecha": 2,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
         "position": 3,
         "points": 60,
-        "partner": "Felipe Canario"
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Teo Arentsen Piracés"
+      }
+    ],
+    "id": "steven-jialuo-li-zhong",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Beatriz Palma",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 180,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 3,
+    "categories": [
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Emilia Palma"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Vicente Rivera"
+      }
+    ],
+    "id": "beatriz-palma",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Monserrat Loyola",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 180,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 3,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Amanda Carvajal"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Amaro Valdebenito"
+      }
+    ],
+    "id": "monserrat-loyola",
+    "color": "#008300"
+  },
+  {
+    "name": "Amaro Valdebenito",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 170,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 1,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Vicente Rivera"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Monserrat Loyola"
+      }
+    ],
+    "id": "amaro-valdebenito",
+    "color": "#008300"
+  },
+  {
+    "name": "Javiera Pantoja Andrades",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 170,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
       },
       {
         "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Nicole Pantoja Sepúlveda"
+      },
+      {
+        "fecha": 2,
+        "event": "WS",
+        "category": "Adulto",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": "Nicole Pantoja Sepúlveda"
+      },
+      {
+        "fecha": 2,
         "event": "XD",
         "category": "Adulto",
         "modality": "Dobles Mixto",
         "position": 5,
         "points": 30,
-        "partner": "Francisca Riquelme"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "BD U19",
-        "category": "Sub19",
-        "modality": "Dobles Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": "Felipe Canario"
+        "partner": "Daniel Cortez"
       }
     ],
-    "id": "ignacio-navarrete",
-    "color": "#008300"
+    "id": "javiera-pantoja-andrades",
+    "color": "#4a3aa7"
   },
   {
     "name": "Ting Ting Chou Hu",
@@ -1585,15 +3320,15 @@ const PLAYERS = [
     "color": "#2a78d6"
   },
   {
-    "name": "Felipe Saez Zurita",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
+    "name": "Cristobal Miranda Rodriguez",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
     "total_points": 160,
     "gold": 0,
-    "silver": 0,
-    "bronze": 1,
+    "silver": 1,
+    "bronze": 0,
     "categories": [
-      "Sub15"
+      "Adulto"
     ],
     "modalities": [
       "Dobles Masculino",
@@ -1603,34 +3338,120 @@ const PLAYERS = [
     "results": [
       {
         "fecha": 1,
-        "event": "BS U15",
-        "category": "Sub15",
+        "event": "MS",
+        "category": "Adulto",
         "modality": "Individuales Masculino",
-        "position": 3,
-        "points": 60,
+        "position": null,
+        "points": 10,
         "partner": null
       },
       {
         "fecha": 1,
-        "event": "BD U15",
-        "category": "Sub15",
+        "event": "MD",
+        "category": "Adulto",
         "modality": "Dobles Masculino",
-        "position": 4,
-        "points": 50,
-        "partner": "Derek Oses"
+        "position": 2,
+        "points": 80,
+        "partner": "Bruno Mora"
       },
       {
         "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
+        "event": "XD",
+        "category": "Adulto",
         "modality": "Dobles Mixto",
-        "position": 4,
-        "points": 50,
-        "partner": "Amanda Senn"
+        "position": 5,
+        "points": 30,
+        "partner": "Alexandra Campusano Molina"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Gabriel Ponce Barra"
       }
     ],
-    "id": "felipe-saez-zurita",
-    "color": "#008300"
+    "id": "cristobal-miranda-rodriguez",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Emilia Gonzalez",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 160,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Nicole Schneiter"
+      },
+      {
+        "fecha": 1,
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Angel Lorca Contreras"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Ricardo Muñoz Toledo"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Wei Quan Oscar Cen He"
+      }
+    ],
+    "id": "emilia-gonzalez",
+    "color": "#e87ba4"
   },
   {
     "name": "Gabriel Vicencio López",
@@ -1690,6 +3511,110 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
+    "name": "Gonzalo Avello",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 160,
+    "gold": 1,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Mathias Williams"
+      }
+    ],
+    "id": "gonzalo-avello",
+    "color": "#008300"
+  },
+  {
+    "name": "Haofeng Luo Wo",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 160,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 0,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 2,
+        "points": 80,
+        "partner": "Agustin Troncoso"
+      },
+      {
+        "fecha": 1,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Fabiola Neumann"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Haojun Luo Wo"
+      }
+    ],
+    "id": "haofeng-luo-wo",
+    "color": "#2a78d6"
+  },
+  {
     "name": "Yeiden Ramirez Reinoso",
     "club": "Club Bádminton Limarí",
     "club_short": "CB Limarí",
@@ -1747,62 +3672,13 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
-    "name": "Fabiola Neumann",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
+    "name": "Gaspar Ponce",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
     "total_points": 150,
     "gold": 0,
     "silver": 0,
     "bronze": 2,
-    "categories": [
-      "Sub15",
-      "Sub17"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "GS U15",
-        "category": "Sub15",
-        "modality": "Individuales Femenino",
-        "position": 3,
-        "points": 60,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 5,
-        "points": 30,
-        "partner": "Haofeng Luo Wo"
-      },
-      {
-        "fecha": 1,
-        "event": "GD U17",
-        "category": "Sub17",
-        "modality": "Dobles Femenino",
-        "position": 3,
-        "points": 60,
-        "partner": "Amanda Senn"
-      }
-    ],
-    "id": "fabiola-neumann",
-    "color": "#008300"
-  },
-  {
-    "name": "Derek Oses",
-    "club": "Club Deportivo Kaizen",
-    "club_short": "CDSC Kaizen",
-    "total_points": 140,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 1,
     "categories": [
       "Sub15"
     ],
@@ -1813,9 +3689,57 @@ const PLAYERS = [
     ],
     "results": [
       {
-        "fecha": 1,
+        "fecha": 2,
         "event": "BS U15",
         "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Agustin Troncoso"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Consuelo Valdebenito"
+      }
+    ],
+    "id": "gaspar-ponce",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Teo Arentsen Piracés",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 150,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "BS U17",
+        "category": "Sub17",
         "modality": "Individuales Masculino",
         "position": 5,
         "points": 30,
@@ -1823,25 +3747,120 @@ const PLAYERS = [
       },
       {
         "fecha": 1,
-        "event": "BD U15",
-        "category": "Sub15",
+        "event": "BD U17",
+        "category": "Sub17",
         "modality": "Dobles Masculino",
-        "position": 4,
-        "points": 50,
-        "partner": "Felipe Saez Zurita"
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
         "position": 3,
         "points": 60,
-        "partner": "Consuelo Valdebenito"
+        "partner": "Steven Jialuo Li Zhong"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Steven Jialuo Li Zhong"
       }
     ],
-    "id": "derek-oses",
+    "id": "teo-arentsen-piraces",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Sofia Tello",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 140,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "GS U19",
+        "category": "Sub19",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": "Sarai Espinoza Manquecura"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Ignacio Navarrete"
+      }
+    ],
+    "id": "sofia-tello",
     "color": "#008300"
+  },
+  {
+    "name": "Camila Macaya",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 130,
+    "gold": 1,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "WD",
+        "category": "Adulto",
+        "modality": "Dobles Femenino",
+        "position": 1,
+        "points": 100,
+        "partner": "Ashley Montre Rubilar"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Simón Álvarez"
+      }
+    ],
+    "id": "camila-macaya",
+    "color": "#2a78d6"
   },
   {
     "name": "Vadot Elise",
@@ -1892,15 +3911,66 @@ const PLAYERS = [
     "color": "#898781"
   },
   {
-    "name": "Cristobal Miranda Rodriguez",
+    "name": "Emilia Palma",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 120,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Daniel Rebolledo"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U17",
+        "category": "Sub17",
+        "modality": "Individuales Femenino",
+        "position": 4,
+        "points": 50,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U19",
+        "category": "Sub19",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Beatriz Palma"
+      }
+    ],
+    "id": "emilia-palma",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Jhon Alcons Calle",
     "club": "Club Bádminton Antofagasta",
     "club_short": "CB Antofagasta",
     "total_points": 120,
     "gold": 0,
-    "silver": 1,
+    "silver": 0,
     "bronze": 0,
     "categories": [
-      "Adulto"
+      "Adulto",
+      "Sub19"
     ],
     "modalities": [
       "Dobles Masculino",
@@ -1922,168 +3992,67 @@ const PLAYERS = [
         "event": "MD",
         "category": "Adulto",
         "modality": "Dobles Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": "Bruno Mora"
+        "position": 5,
+        "points": 30,
+        "partner": "Bastian Astudillo Quispe"
       },
       {
         "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 5,
-        "points": 30,
-        "partner": "Alexandra Campusano Molina"
-      }
-    ],
-    "id": "cristobal-miranda-rodriguez",
-    "color": "#2a78d6"
-  },
-  {
-    "name": "Emilia Gonzalez",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 120,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 1,
-    "categories": [
-      "Adulto",
-      "Sub17",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Femenino",
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 5,
-        "points": 30,
-        "partner": "Nicole Schneiter"
-      },
-      {
-        "fecha": 1,
-        "event": "GS U17",
-        "category": "Sub17",
-        "modality": "Individuales Femenino",
-        "position": 5,
-        "points": 30,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "XD U19",
+        "event": "BS U19",
         "category": "Sub19",
-        "modality": "Dobles Mixto",
-        "position": 3,
-        "points": 60,
-        "partner": "Angel Lorca Contreras"
-      }
-    ],
-    "id": "emilia-gonzalez",
-    "color": "#e87ba4"
-  },
-  {
-    "name": "Haofeng Luo Wo",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 120,
-    "gold": 0,
-    "silver": 1,
-    "bronze": 0,
-    "categories": [
-      "Sub15"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "BS U15",
-        "category": "Sub15",
         "modality": "Individuales Masculino",
         "position": null,
         "points": 10,
         "partner": null
       },
       {
-        "fecha": 1,
-        "event": "BD U15",
-        "category": "Sub15",
-        "modality": "Dobles Masculino",
-        "position": 2,
-        "points": 80,
-        "partner": "Agustin Troncoso"
-      },
-      {
-        "fecha": 1,
-        "event": "XD U15",
-        "category": "Sub15",
-        "modality": "Dobles Mixto",
-        "position": 5,
-        "points": 30,
-        "partner": "Fabiola Neumann"
-      }
-    ],
-    "id": "haofeng-luo-wo",
-    "color": "#2a78d6"
-  },
-  {
-    "name": "Sarai Espinoza Manquecura",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 120,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 1,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Mixto",
-      "Individuales Femenino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "WS",
+        "fecha": 2,
+        "event": "MS",
         "category": "Adulto",
-        "modality": "Individuales Femenino",
+        "modality": "Individuales Masculino",
         "position": null,
         "points": 10,
         "partner": null
       },
       {
-        "fecha": 1,
-        "event": "GS U19",
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Bastian Astudillo Quispe"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Ashlyn Alcons"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
         "category": "Sub19",
-        "modality": "Individuales Femenino",
-        "position": 3,
-        "points": 60,
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
         "partner": null
       },
       {
-        "fecha": 1,
-        "event": "XD U19",
+        "fecha": 2,
+        "event": "BD U19",
         "category": "Sub19",
-        "modality": "Dobles Mixto",
-        "position": 4,
-        "points": 50,
-        "partner": "Joaquin Bugueño Chinchilla"
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Jorge Higuera"
       }
     ],
-    "id": "sarai-espinoza-manquecura",
-    "color": "#e87ba4"
+    "id": "jhon-alcons-calle",
+    "color": "#2a78d6"
   },
   {
     "name": "Valentina Arriagada Noack",
@@ -2134,10 +4103,10 @@ const PLAYERS = [
     "color": "#eda100"
   },
   {
-    "name": "Andrea Montero Sanchez",
-    "club": "Independiente",
-    "club_short": "Independiente",
-    "total_points": 100,
+    "name": "Daniel Astudillo Opazo",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 110,
     "gold": 0,
     "silver": 0,
     "bronze": 1,
@@ -2145,28 +4114,28 @@ const PLAYERS = [
       "Adulto"
     ],
     "modalities": [
-      "Dobles Femenino",
+      "Dobles Masculino",
       "Dobles Mixto",
-      "Individuales Femenino"
+      "Individuales Masculino"
     ],
     "results": [
       {
         "fecha": 1,
-        "event": "WS",
+        "event": "MS",
         "category": "Adulto",
-        "modality": "Individuales Femenino",
-        "position": 5,
-        "points": 30,
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
         "partner": null
       },
       {
         "fecha": 1,
-        "event": "WD",
+        "event": "MD",
         "category": "Adulto",
-        "modality": "Dobles Femenino",
-        "position": 3,
-        "points": 60,
-        "partner": "Vadot Elise"
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Martín Corvalán Morbiducci"
       },
       {
         "fecha": 1,
@@ -2175,11 +4144,248 @@ const PLAYERS = [
         "modality": "Dobles Mixto",
         "position": null,
         "points": 10,
-        "partner": "Daniel Astudillo Opazo"
+        "partner": "Andrea Montero Sanchez"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Javier Aretsen"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 3,
+        "points": 60,
+        "partner": "Andrea Montero Sanchez"
       }
     ],
-    "id": "andrea-montero-sanchez",
-    "color": "#898781"
+    "id": "daniel-astudillo-opazo",
+    "color": "#e87ba4"
+  },
+  {
+    "name": "Jeronimo Cardona",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 110,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 0,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Cristobal Mena"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 2,
+        "points": 80,
+        "partner": "Francisca Diaz Gomez"
+      }
+    ],
+    "id": "jeronimo-cardona",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Mathias Williams",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 110,
+    "gold": 1,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 1,
+        "points": 100,
+        "partner": "Gonzalo Avello"
+      }
+    ],
+    "id": "mathias-williams",
+    "color": "#008300"
+  },
+  {
+    "name": "Daniel Cortez",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 100,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Cristóbal Melgarejo Rozas"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Javiera Pantoja Andrades"
+      }
+    ],
+    "id": "daniel-cortez",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Josefa Torres",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 100,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Ashlyn Alcons"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Cristobal Mena"
+      }
+    ],
+    "id": "josefa-torres",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Amanda Carvajal",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 90,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 3,
+        "points": 60,
+        "partner": "Monserrat Loyola"
+      }
+    ],
+    "id": "amanda-carvajal",
+    "color": "#008300"
   },
   {
     "name": "Juan Guillermo Del Pino",
@@ -2268,15 +4474,15 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
-    "name": "Steven Jialuo Li Zhong",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
+    "name": "Nicolas Monne",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
     "total_points": 90,
     "gold": 0,
-    "silver": 0,
-    "bronze": 1,
+    "silver": 1,
+    "bronze": 0,
     "categories": [
-      "Sub17"
+      "Adulto"
     ],
     "modalities": [
       "Dobles Masculino",
@@ -2284,37 +4490,37 @@ const PLAYERS = [
     ],
     "results": [
       {
-        "fecha": 1,
-        "event": "BS U17",
-        "category": "Sub17",
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
         "modality": "Individuales Masculino",
-        "position": 5,
-        "points": 30,
+        "position": null,
+        "points": 10,
         "partner": null
       },
       {
-        "fecha": 1,
-        "event": "BD U17",
-        "category": "Sub17",
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
         "modality": "Dobles Masculino",
-        "position": 3,
-        "points": 60,
-        "partner": "Teo Arentsen Piracés"
+        "position": 2,
+        "points": 80,
+        "partner": "Felipe Canario"
       }
     ],
-    "id": "steven-jialuo-li-zhong",
-    "color": "#e87ba4"
+    "id": "nicolas-monne",
+    "color": "#008300"
   },
   {
-    "name": "Teo Arentsen Piracés",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
+    "name": "Vicente Fuentes",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
     "total_points": 90,
     "gold": 0,
     "silver": 0,
     "bronze": 1,
     "categories": [
-      "Sub17"
+      "Sub15"
     ],
     "modalities": [
       "Dobles Masculino",
@@ -2322,25 +4528,140 @@ const PLAYERS = [
     ],
     "results": [
       {
-        "fecha": 1,
-        "event": "BS U17",
-        "category": "Sub17",
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
         "modality": "Individuales Masculino",
         "position": 5,
         "points": 30,
         "partner": null
       },
       {
-        "fecha": 1,
-        "event": "BD U17",
-        "category": "Sub17",
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
         "modality": "Dobles Masculino",
         "position": 3,
         "points": 60,
-        "partner": "Steven Jialuo Li Zhong"
+        "partner": "Sebastian Millacoy"
       }
     ],
-    "id": "teo-arentsen-piraces",
+    "id": "vicente-fuentes",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Ashlyn Alcons",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 80,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Femenino",
+      "Dobles Mixto",
+      "Individuales Femenino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Jhon Alcons Calle"
+      },
+      {
+        "fecha": 2,
+        "event": "GS U15",
+        "category": "Sub15",
+        "modality": "Individuales Femenino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "GD U15",
+        "category": "Sub15",
+        "modality": "Dobles Femenino",
+        "position": 5,
+        "points": 30,
+        "partner": "Josefa Torres"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Bastian Astudillo Quispe"
+      }
+    ],
+    "id": "ashlyn-alcons",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Camilo Huenchuman",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 80,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Siul Carrasco"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Siul Carrasco"
+      }
+    ],
+    "id": "camilo-huenchuman",
     "color": "#e87ba4"
   },
   {
@@ -2392,6 +4713,81 @@ const PLAYERS = [
     "color": "#e87ba4"
   },
   {
+    "name": "Ricardo Muñoz Toledo",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 80,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 1,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 1,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Matias Olagnier"
+      },
+      {
+        "fecha": 1,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Ting Ting Chou Hu"
+      },
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Andres Trigo"
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Emilia Gonzalez"
+      }
+    ],
+    "id": "ricardo-munoz-toledo",
+    "color": "#e87ba4"
+  },
+  {
     "name": "Arturo Simon Burgos Quiñones",
     "club": "Club Bádminton Limarí",
     "club_short": "CB Limarí",
@@ -2428,6 +4824,237 @@ const PLAYERS = [
     ],
     "id": "arturo-simon-burgos-quinones",
     "color": "#eb6834"
+  },
+  {
+    "name": "Cristobal Mena",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 70,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Jeronimo Cardona"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U15",
+        "category": "Sub15",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Josefa Torres"
+      }
+    ],
+    "id": "cristobal-mena",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Jorge Higuera",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 70,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Benjamin Higuera"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Jhon Alcons Calle"
+      }
+    ],
+    "id": "jorge-higuera",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Matias Lema",
+    "club": "Club Deportivo Kaizen",
+    "club_short": "CDSC Kaizen",
+    "total_points": 70,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "BS U19",
+        "category": "Sub19",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Ignacio Navarrete"
+      },
+      {
+        "fecha": 2,
+        "event": "XD U19",
+        "category": "Sub19",
+        "modality": "Dobles Mixto",
+        "position": 5,
+        "points": 30,
+        "partner": "Martina Medina"
+      }
+    ],
+    "id": "matias-lema",
+    "color": "#008300"
+  },
+  {
+    "name": "Sebastian Millacoy",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 70,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 3,
+        "points": 60,
+        "partner": "Vicente Fuentes"
+      }
+    ],
+    "id": "sebastian-millacoy",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Siul Carrasco",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 70,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto",
+      "Sub17",
+      "Sub19"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Camilo Huenchuman"
+      },
+      {
+        "fecha": 2,
+        "event": "BS U17",
+        "category": "Sub17",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U19",
+        "category": "Sub19",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Camilo Huenchuman"
+      }
+    ],
+    "id": "siul-carrasco",
+    "color": "#e87ba4"
   },
   {
     "name": "Vicente González Candia",
@@ -2468,7 +5095,7 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
-    "name": "Javiera Pantoja Andrades",
+    "name": "Hernan Vera",
     "club": "Club Bádminton Victoria",
     "club_short": "CB Victoria",
     "total_points": 60,
@@ -2476,33 +5103,33 @@ const PLAYERS = [
     "silver": 0,
     "bronze": 0,
     "categories": [
-      "Adulto"
+      "Sub15"
     ],
     "modalities": [
-      "Dobles Femenino",
-      "Individuales Femenino"
+      "Dobles Masculino",
+      "Individuales Masculino"
     ],
     "results": [
       {
-        "fecha": 1,
-        "event": "WS",
-        "category": "Adulto",
-        "modality": "Individuales Femenino",
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
         "position": 5,
         "points": 30,
         "partner": null
       },
       {
-        "fecha": 1,
-        "event": "WD",
-        "category": "Adulto",
-        "modality": "Dobles Femenino",
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
         "position": 5,
         "points": 30,
-        "partner": "Nicole Pantoja Sepúlveda"
+        "partner": "Matias Astudillo"
       }
     ],
-    "id": "javiera-pantoja-andrades",
+    "id": "hernan-vera",
     "color": "#4a3aa7"
   },
   {
@@ -2658,54 +5285,6 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
-    "name": "Jhon Alcons Calle",
-    "club": "Club Bádminton Antofagasta",
-    "club_short": "CB Antofagasta",
-    "total_points": 50,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto",
-      "Sub19"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": 5,
-        "points": 30,
-        "partner": "Bastian Astudillo Quispe"
-      },
-      {
-        "fecha": 1,
-        "event": "BS U19",
-        "category": "Sub19",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      }
-    ],
-    "id": "jhon-alcons-calle",
-    "color": "#2a78d6"
-  },
-  {
     "name": "Jiahong Wang",
     "club": "Club Bádminton Limarí",
     "club_short": "CB Limarí",
@@ -2754,54 +5333,6 @@ const PLAYERS = [
     "color": "#eb6834"
   },
   {
-    "name": "Ricardo Muñoz Toledo",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 50,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": null,
-        "points": 10,
-        "partner": "Matias Olagnier"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": 5,
-        "points": 30,
-        "partner": "Ting Ting Chou Hu"
-      }
-    ],
-    "id": "ricardo-munoz-toledo",
-    "color": "#e87ba4"
-  },
-  {
     "name": "Alonso Maldonado Sanchez",
     "club": "Club Bádminton Limarí",
     "club_short": "CB Limarí",
@@ -2838,6 +5369,44 @@ const PLAYERS = [
     ],
     "id": "alonso-maldonado-sanchez",
     "color": "#eb6834"
+  },
+  {
+    "name": "Andres Trigo",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 40,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Ricardo Muñoz Toledo"
+      }
+    ],
+    "id": "andres-trigo",
+    "color": "#2a78d6"
   },
   {
     "name": "Clément Delvigne",
@@ -2878,6 +5447,82 @@ const PLAYERS = [
     "color": "#1baf7a"
   },
   {
+    "name": "Haojun Luo Wo",
+    "club": "Club Bádminton Antofagasta",
+    "club_short": "CB Antofagasta",
+    "total_points": 40,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Haofeng Luo Wo"
+      }
+    ],
+    "id": "haojun-luo-wo",
+    "color": "#2a78d6"
+  },
+  {
+    "name": "Matias Astudillo",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 40,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Sub15"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "BS U15",
+        "category": "Sub15",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "BD U15",
+        "category": "Sub15",
+        "modality": "Dobles Masculino",
+        "position": 5,
+        "points": 30,
+        "partner": "Hernan Vera"
+      }
+    ],
+    "id": "matias-astudillo",
+    "color": "#4a3aa7"
+  },
+  {
     "name": "Consuelo Moscoso Cordova",
     "club": "Club Bádminton Santiago",
     "club_short": "CB Santiago",
@@ -2903,54 +5548,6 @@ const PLAYERS = [
       }
     ],
     "id": "consuelo-moscoso-cordova",
-    "color": "#e87ba4"
-  },
-  {
-    "name": "Daniel Astudillo Opazo",
-    "club": "Club Bádminton Santiago",
-    "club_short": "CB Santiago",
-    "total_points": 30,
-    "gold": 0,
-    "silver": 0,
-    "bronze": 0,
-    "categories": [
-      "Adulto"
-    ],
-    "modalities": [
-      "Dobles Masculino",
-      "Dobles Mixto",
-      "Individuales Masculino"
-    ],
-    "results": [
-      {
-        "fecha": 1,
-        "event": "MS",
-        "category": "Adulto",
-        "modality": "Individuales Masculino",
-        "position": null,
-        "points": 10,
-        "partner": null
-      },
-      {
-        "fecha": 1,
-        "event": "MD",
-        "category": "Adulto",
-        "modality": "Dobles Masculino",
-        "position": null,
-        "points": 10,
-        "partner": "Martín Corvalán Morbiducci"
-      },
-      {
-        "fecha": 1,
-        "event": "XD",
-        "category": "Adulto",
-        "modality": "Dobles Mixto",
-        "position": null,
-        "points": 10,
-        "partner": "Andrea Montero Sanchez"
-      }
-    ],
-    "id": "daniel-astudillo-opazo",
     "color": "#e87ba4"
   },
   {
@@ -3030,6 +5627,82 @@ const PLAYERS = [
     "color": "#e87ba4"
   },
   {
+    "name": "Benjamin Higuera",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 20,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Jorge Higuera"
+      }
+    ],
+    "id": "benjamin-higuera",
+    "color": "#4a3aa7"
+  },
+  {
+    "name": "Daniel Rebolledo",
+    "club": "Club Bádminton Victoria",
+    "club_short": "CB Victoria",
+    "total_points": 20,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Mixto",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "XD",
+        "category": "Adulto",
+        "modality": "Dobles Mixto",
+        "position": null,
+        "points": 10,
+        "partner": "Emilia Palma"
+      }
+    ],
+    "id": "daniel-rebolledo",
+    "color": "#4a3aa7"
+  },
+  {
     "name": "Francisco Rojas Lemus",
     "club": "Club Bádminton Limarí",
     "club_short": "CB Limarí",
@@ -3066,6 +5739,44 @@ const PLAYERS = [
     ],
     "id": "francisco-rojas-lemus",
     "color": "#eb6834"
+  },
+  {
+    "name": "Javier Aretsen",
+    "club": "Club Bádminton Santiago",
+    "club_short": "CB Santiago",
+    "total_points": 20,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0,
+    "categories": [
+      "Adulto"
+    ],
+    "modalities": [
+      "Dobles Masculino",
+      "Individuales Masculino"
+    ],
+    "results": [
+      {
+        "fecha": 2,
+        "event": "MS",
+        "category": "Adulto",
+        "modality": "Individuales Masculino",
+        "position": null,
+        "points": 10,
+        "partner": null
+      },
+      {
+        "fecha": 2,
+        "event": "MD",
+        "category": "Adulto",
+        "modality": "Dobles Masculino",
+        "position": null,
+        "points": 10,
+        "partner": "Daniel Astudillo Opazo"
+      }
+    ],
+    "id": "javier-aretsen",
+    "color": "#e87ba4"
   },
   {
     "name": "Javiera Villalón Vivar",
@@ -3231,80 +5942,123 @@ const PLAYERS = [
 
 const CLUBS = [
   {
-    "name": "Club Bádminton Antofagasta",
-    "short": "CB Antofagasta",
-    "athletes": 14,
-    "gold": 17,
-    "silver": 7,
-    "bronze": 6,
-    "fecha1_points": 256,
-    "rank": 1,
-    "color": "#2a78d6"
-  },
-  {
     "name": "Club Deportivo Kaizen",
     "short": "CDSC Kaizen",
-    "athletes": 12,
-    "gold": 6,
-    "silver": 14,
-    "bronze": 12,
-    "fecha1_points": 230,
-    "rank": 2,
-    "color": "#008300"
+    "color": "#008300",
+    "athletes": 21,
+    "gold": 14,
+    "silver": 30,
+    "bronze": 26,
+    "by_fecha": {
+      "1": 230,
+      "2": 269
+    },
+    "total_points": 499,
+    "rank": 1
   },
   {
-    "name": "Club Bádminton Santiago",
-    "short": "CB Santiago",
-    "athletes": 16,
-    "gold": 1,
-    "silver": 1,
-    "bronze": 12,
-    "fecha1_points": 134,
-    "rank": 3,
-    "color": "#e87ba4"
-  },
-  {
-    "name": "Club Bádminton Limarí",
-    "short": "CB Limarí",
-    "athletes": 12,
-    "gold": 0,
-    "silver": 2,
-    "bronze": 5,
-    "fecha1_points": 107,
-    "rank": 4,
-    "color": "#eb6834"
+    "name": "Club Bádminton Antofagasta",
+    "short": "CB Antofagasta",
+    "color": "#2a78d6",
+    "athletes": 23,
+    "gold": 30,
+    "silver": 12,
+    "bronze": 13,
+    "by_fecha": {
+      "1": 256,
+      "2": 226
+    },
+    "total_points": 482,
+    "rank": 2
   },
   {
     "name": "Club Bádminton Victoria",
     "short": "CB Victoria",
-    "athletes": 4,
-    "gold": 4,
+    "color": "#4a3aa7",
+    "athletes": 15,
+    "gold": 8,
+    "silver": 6,
+    "bronze": 15,
+    "by_fecha": {
+      "1": 103,
+      "2": 167
+    },
+    "total_points": 270,
+    "rank": 3
+  },
+  {
+    "name": "Club Bádminton Santiago",
+    "short": "CB Santiago",
+    "color": "#e87ba4",
+    "athletes": 19,
+    "gold": 2,
     "silver": 3,
-    "bronze": 2,
-    "fecha1_points": 103,
-    "rank": 5,
-    "color": "#4a3aa7"
+    "bronze": 19,
+    "by_fecha": {
+      "1": 134,
+      "2": 120
+    },
+    "total_points": 254,
+    "rank": 4
+  },
+  {
+    "name": "Club Bádminton Limarí",
+    "short": "CB Limarí",
+    "color": "#eb6834",
+    "athletes": 12,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 5,
+    "by_fecha": {
+      "1": 107,
+      "2": 0
+    },
+    "total_points": 107,
+    "rank": 5
+  },
+  {
+    "name": "Club Bádminton Concón",
+    "short": "CB Concón",
+    "color": "#8a5a3c",
+    "athletes": 1,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 3,
+    "by_fecha": {
+      "1": 0,
+      "2": 60
+    },
+    "total_points": 60,
+    "rank": 6
   },
   {
     "name": "Club Bádminton Esperanza de Quilpué",
     "short": "CB Esperanza de Quilpué",
+    "color": "#eda100",
     "athletes": 2,
     "gold": 0,
     "silver": 1,
     "bronze": 0,
-    "fecha1_points": 57,
-    "rank": 6,
-    "color": "#eda100"
+    "by_fecha": {
+      "1": 57,
+      "2": 0
+    },
+    "total_points": 57,
+    "rank": 7
   },
   {
     "name": "Club Bádminton Valparaíso",
     "short": "CB Valparaíso",
+    "color": "#1baf7a",
     "athletes": 3,
     "gold": 0,
     "silver": 0,
     "bronze": 0,
-    "fecha1_points": 53,
-    "rank": 7,
-    "color": "#1baf7a"
+    "by_fecha": {
+      "1": 53,
+      "2": 0
+    },
+    "total_points": 53,
+    "rank": 8
   }
 ];
