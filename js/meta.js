@@ -60,7 +60,9 @@ const FECHAS = [
     numero: 3,
     nombre: "3ª Fecha y Premiación Anual",
     fechaTexto: "Miércoles 28 de octubre al domingo 1 de noviembre 2026",
-    sede: "Por confirmar",
+    // Vuelve al CEO, la misma sede de la 1ª Fecha.
+    sede: "Centro de Entrenamiento Olímpico (CEO), Ñuñoa, Santiago",
+    sedeCorta: "CEO, Santiago",
     estado: "proxima",
     eventos: null,
     inscritos: null,
